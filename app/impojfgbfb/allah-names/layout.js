@@ -1,13 +1,7 @@
-import { Amiri } from "next/font/google"
 
-const amiri = Amiri({
-  subsets: ["arabic"],
-  weight: "400",
-  variable: "--font-arabic"
-})
 
 export const metadata = {
-  title: "99 Names of Allah",
+  title: "আল্লাহর ৯৯ টি নাম -ইসলামিক ভাই",
 }
 
 

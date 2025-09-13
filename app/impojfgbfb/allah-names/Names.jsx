@@ -1,6 +1,6 @@
 "use client";
 
-import { lazy, Suspense } from "react";
+import { lazy, Suspense, useEffect, useState } from "react";
 import { Search, X } from "lucide-react";
 import { Skeleton } from "@/components/ui/skeleton";
 

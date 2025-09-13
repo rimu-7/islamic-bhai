@@ -2,11 +2,20 @@ import "./globals.css";
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
 import { Hind_Siliguri } from "next/font/google";
+import { Amiri } from "next/font/google";
 
 const hindSiliguri = Hind_Siliguri({
   subsets: ["bengali"],
   weight: ["400", "500", "600", "700"],
   variable: "--font-bangla",
+  display: "swap",
+});
+
+const amiri = Amiri({
+  subsets: ["arabic"],
+  weight: "400",
+  variable: "--font-arabic",
+  display: "swap",
 });
 
 export const metadata = {
@@ -20,16 +29,14 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="bn" className={hindSiliguri.variable}>
-      <head>
-        <link rel="icon" href="/favicon.ico" />
-      </head>
+    <html lang="bn" className={`${hindSiliguri.variable} ${amiri.variable}`}>
       <body className="font-sans antialiased bg-white text-gray-900">
+        <a href="#main" className="sr-only focus:not-sr-only">Skip to content</a>
         <Navbar />
-        <div className="max-w-6xl mx-auto px-4">
+        <main id="main" className="max-w-6xl mx-auto px-4">
           {children}
-          <Footer />
-        </div>
+        </main>
+        <Footer />
       </body>
     </html>
   );
