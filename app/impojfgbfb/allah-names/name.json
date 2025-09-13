@@ -1,0 +1,697 @@
+{
+  "names": [
+    {
+      "number": 1,
+      "name": "ٱلرَّحْمَٰنُ",
+      "transliteration": "আর-রহমান",
+      "bn": "পরম করুণাময়",
+      "desc": "সমগ্র সৃষ্টিজগতের জন্য আল্লাহর অফুরান রহমত ও করুণার প্রকাশ। তিনি সকলকে তার দয়া ও অনুগ্রহ দ্বারা পরিবেষ্টিত রাখেন।"
+    },
+    {
+      "number": 2,
+      "name": "ٱلرَّحِيمُ",
+      "transliteration": "আর-রহিম",
+      "bn": "অত্যন্ত দয়ালু",
+      "desc": "বিশেষভাবে মুমিনদের জন্য আল্লাহর দয়া ও করুণা। তিনি তাদের প্রতি বিশেষ রহমত ও ক্ষমা প্রদর্শন করেন।"
+    },
+    {
+      "number": 3,
+      "name": "ٱلْمَلِكُ",
+      "transliteration": "আল-মালিক",
+      "bn": "সর্বময় রাজাধিরাজ",
+      "desc": "সমগ্র বিশ্বজগতের প্রকৃত মালিক ও শাসক। তাঁর রাজত্ব চিরস্থায়ী এবং সকল সৃষ্টি তাঁরই অধীন।"
+    },
+    {
+      "number": 4,
+      "name": "ٱلْقُدُّوسُ",
+      "transliteration": "আল-কুদ্দুস",
+      "bn": "পবিত্রতম",
+      "desc": "সমস্ত দোষ-ত্রুটি ও অসম্পূর্ণতা থেকে পবিত্র। তিনি পরম পবিত্র ও মহিমান্বিত।"
+    },
+    {
+      "number": 5,
+      "name": "ٱلسَّلَامُ",
+      "transliteration": "আস-সালাম",
+      "bn": "শান্তির উৎস",
+      "desc": "পরিপূর্ণ শান্তি ও নিরাপত্তার আধার। তাঁর থেকে সকল প্রকার শান্তি ও কল্যাণ নির্গত হয়।"
+    },
+    {
+      "number": 6,
+      "name": "ٱلْمُؤْمِنُ",
+      "transliteration": "আল-মু'মিন",
+      "bn": "নিরাপত্তা দানকারী",
+      "desc": "তিনি তাঁর বান্দাদের নিরাপত্তা প্রদান করেন এবং ঈমানের আলো দ্বারা তাদের হৃদয়কে আলোকিত করেন।"
+    },
+    {
+      "number": 7,
+      "name": "ٱلْمُهَيْمِنُ",
+      "transliteration": "আল-মুহাইমিন",
+      "bn": "পরিপূর্ণ রক্ষক",
+      "desc": "সকল সৃষ্টির উপর পূর্ণ নিয়ন্ত্রণ রাখেন এবং তাদের রক্ষণাবেক্ষণ করেন।"
+    },
+    {
+      "number": 8,
+      "name": "ٱلْعَزِيزُ",
+      "transliteration": "আল-আজিজ",
+      "bn": "মহাশক্তিধর",
+      "desc": "পরাক্রমশালী ও অপরাজেয়। তাঁর ইচ্ছা ও ক্ষমতার বিরুদ্ধে কেউ টিকতে পারে না।"
+    },
+    {
+      "number": 9,
+      "name": "ٱلْجَبَّارُ",
+      "transliteration": "আল-জাব্বার",
+      "bn": "অদম্য ক্ষমতাধর",
+      "desc": "যিনি সকল সৃষ্টিকে তাঁর ইচ্ছার অধীন করেন এবং যেকোনো সমস্যা সমাধান করতে সক্ষম।"
+    },
+    {
+      "number": 10,
+      "name": "ٱلْمُتَكَبِّرُ",
+      "transliteration": "আল-মুতাকাব্বির",
+      "bn": "মহান গৌরবময়",
+      "desc": "সকল গৌরব ও মহিমার মালিক। তাঁর মর্যাদা ও শ্রেষ্ঠত্ব অপরিসীম।"
+    },
+    {
+      "number": 11,
+      "name": "ٱلْخَالِقُ",
+      "transliteration": "আল-খালিক",
+      "bn": "সৃষ্টিকর্তা",
+      "desc": "সমস্ত সৃষ্টিকে অস্তিত্বে আনয়নকারী। তিনি প্রতিটি বস্তুকে তার নির্দিষ্ট পরিমাণ ও সুষম আকারে সৃষ্টি করেছেন।"
+    },
+    {
+      "number": 12,
+      "name": "ٱلْبَارِئُ",
+      "transliteration": "আল-বারি",
+      "bn": "সৃষ্টি উদ্ভাবক",
+      "desc": "সৃষ্টিকে নিখুঁতভাবে গঠনকারী এবং তাদের মধ্যে সামঞ্জস্য প্রতিষ্ঠাকারী।"
+    },
+    {
+      "number": 13,
+      "name": "ٱلْمُصَوِّرُ",
+      "transliteration": "আল-মুসাওউইর",
+      "bn": "রূপ দানকারী",
+      "desc": "প্রতিটি সৃষ্টিকে তার স্বকীয় আকৃতি ও বৈশিষ্ট্য প্রদানকারী।"
+    },
+    {
+      "number": 14,
+      "name": "ٱلْغَفَّارُ",
+      "transliteration": "আল-গফফার",
+      "bn": "অত্যন্ত ক্ষমাশীল",
+      "desc": "বারবার ক্ষমা প্রদানকারী। তিনি তাঁর বান্দাদের গুনাহসমূহ ঢেকে দেন এবং ক্ষমা করেন।"
+    },
+    {
+      "number": 15,
+      "name": "ٱلْقَهَّارُ",
+      "transliteration": "আল-কাহহার",
+      "bn": "অপরাজেয়",
+      "desc": "সকল সৃষ্টির উপর পূর্ণ কর্তৃত্বশীল। তাঁর ইচ্ছার বিরুদ্ধে কেউ বিদ্রোহ করতে পারে না।"
+    },
+    {
+      "number": 16,
+      "name": "ٱلْوَهَّابُ",
+      "transliteration": "আল-ওয়াহ্হাব",
+      "bn": "দাতা",
+      "desc": "অকৃপণভাবে অনুগ্রহ ও উপহার প্রদানকারী। তিনি বিনা প্রতিদানে দান করেন।"
+    },
+    {
+      "number": 17,
+      "name": "ٱلرَّزَّاقُ",
+      "transliteration": "আর-রজ্জাক",
+      "bn": "রিজিক দানকারী",
+      "desc": "সমস্ত সৃষ্টির জন্য জীবিকা ও প্রয়োজনীয় উপকরণ প্রদানকারী।"
+    },
+    {
+      "number": 18,
+      "name": "ٱلْفَتَّاحُ",
+      "transliteration": "আল-ফাত্তাহ",
+      "bn": "উন্মোচক",
+      "desc": "জ্ঞান, বিজয় ও সমাধানের দরজাসমূহ উন্মোচনকারী। তিনি সকল সমস্যার সমাধান দান করেন।"
+    },
+    {
+      "number": 19,
+      "name": "ٱلْعَلِيمُ",
+      "transliteration": "আল-আলীম",
+      "bn": "সর্বজ্ঞ",
+      "desc": "প্রকাশ্য ও গোপন, ক্ষুদ্র ও বৃহৎ সকল বিষয়ের পূর্ণ জ্ঞান রাখেন।"
+    },
+    {
+      "number": 20,
+      "name": "ٱلْقَابِضُ",
+      "transliteration": "আল-ক্বাবিদ",
+      "bn": "সংকোচনকারী",
+      "desc": "জীবিকা ও অনুগ্রহ সংকুচিতকারী। তিনি তাঁর infinite জ্ঞানে যা合适 মনে করেন তাই করেন।"
+    },
+    {
+      "number": 21,
+      "name": "ٱلْبَاسِطُ",
+      "transliteration": "আল-বাসিত",
+      "bn": "প্রসারক",
+      "desc": "জীবিকা ও রহমত প্রসারিতকারী। তিনি যাকে ইচ্ছা অফুরান অনুগ্রহ দান করেন।"
+    },
+    {
+      "number": 22,
+      "name": "ٱلْخَافِضُ",
+      "transliteration": "আল-খাফিদ",
+      "bn": "অবনতিদাতা",
+      "desc": "অহংকারীদের মর্যাদা হ্রাসকারী এবং তাদেরকে নিম্নস্তরে অবনমিতকারী।"
+    },
+    {
+      "number": 23,
+      "name": "ٱلرَّافِعُ",
+      "transliteration": "আর-রাফি",
+      "bn": "উন্নতিদাতা",
+      "desc": "বিশ্বাসীদের মর্যাদা উন্নতকারী এবং তাদেরকে উচ্চ মাকাম দানকারী।"
+    },
+    {
+      "number": 24,
+      "name": "ٱلْمُعِزُّ",
+      "transliteration": "আল-মুইয",
+      "bn": "সম্মানদাতা",
+      "desc": "যাকে ইচ্ছা সম্মান ও মর্যাদা দানকারী। তিনি মুমিনদেরকে পৃথিবীতে ও আখিরাতে সম্মানিত করেন।"
+    },
+    {
+      "number": 25,
+      "name": "ٱلْمُذِلُّ",
+      "transliteration": "আল-মুদিল",
+      "bn": "অপমানদাতा",
+      "desc": "কাফির ও পাপাচারীদেরকে অপদস্থ ও লাঞ্ছিতকারী।"
+    },
+    {
+      "number": 26,
+      "name": "ٱلسَّمِيعُ",
+      "transliteration": "আস-সামি",
+      "bn": "সর্বশ্রোতা",
+      "desc": "সমস্ত আওয়াজ ও প্রার্থনা শ্রবণকারী। গোপন ও প্রকাশ্য সকল কথা তিনি শুনেন।"
+    },
+    {
+      "number": 27,
+      "name": "ٱلْبَصِيرُ",
+      "transliteration": "আল-বাসীর",
+      "bn": "সর্বদ্রষ্টা",
+      "desc": "সকল কিছু দেখেন। ক্ষুদ্র থেকে ক্ষুদ্রতর এবং অদৃশ্য বিষয়ও তাঁর দৃষ্টির বাইরে নয়।"
+    },
+    {
+      "number": 28,
+      "name": "ٱلْحَكَمُ",
+      "transliteration": "আল-হাকাম",
+      "bn": "ন্যায়বিচারক",
+      "desc": "সর্বোচ্চ ও ন্যায়নিষ্ঠ বিচারক। তাঁর সিদ্ধান্তই চূড়ান্ত এবং সকলের জন্য তা মেনে নেওয়া বাধ্যতামূলক।"
+    },
+    {
+      "number": 29,
+      "name": "ٱلْعَدْلُ",
+      "transliteration": "আল-আদল",
+      "bn": "ন্যায়পরায়ণ",
+      "desc": "পরিপূর্ণ ন্যায় ও ইনসাফ প্রতিষ্ঠাকারী। তিনি কখনো কারো প্রতি জুলুম করেন না।"
+    },
+    {
+      "number": 30,
+      "name": "ٱللَّطِيفُ",
+      "transliteration": "আল-লতিফ",
+      "bn": "অতিসুকৌশলী",
+      "desc": "সুক্ষ্ম ও কোমলভাবে তাঁর বান্দাদের জন্য ব্যবস্থা গ্রহণকারী। তিনি অদৃশ্য ভাবে কল্যাণ পৌঁছে দেন।"
+    },
+    {
+      "number": 31,
+      "name": "ٱلْخَبِيرُ",
+      "transliteration": "আল-খবির",
+      "bn": "সর্বজ্ঞ",
+      "desc": "গভীর জ্ঞান রাখেন। বাহ্যিক ও আভ্যন্তরীণ সকল অবস্থা তিনি অবগত আছেন।"
+    },
+    {
+      "number": 32,
+      "name": "ٱلْحَلِيمُ",
+      "transliteration": "আল-হালিম",
+      "bn": "সহিষ্ণু",
+      "desc": "অত্যন্ত ধৈর্যশীল। তিনি অবাধ্য বান্দাদেরকে অবিলম্বে শাস্তি দেন না, বরং তাদের তওবার সুযোগ দেন।"
+    },
+    {
+      "number": 33,
+      "name": "ٱلْعَظِيمُ",
+      "transliteration": "আল-আজীম",
+      "bn": "মহান",
+      "desc": "মহিমা, ক্ষমতা ও জ্ঞানে সর্বশ্রেষ্ঠ। তাঁর মহানুভবতা ও শ্রেষ্ঠত্ব অপরিসীম।"
+    },
+    {
+      "number": 34,
+      "name": "ٱلْغَفُورُ",
+      "transliteration": "আল-গফুর",
+      "bn": "পরম ক্ষমাশীল",
+      "desc": "অগণিত পাপ ক্ষমা করতে সক্ষম। তিনি তওবা কারীদের গুনাহসমূহ ক্ষমা করে দেন।"
+    },
+    {
+      "number": 35,
+      "name": "ٱلشَّكُورُ",
+      "transliteration": "আশ-শাকুর",
+      "bn": "গুণগ্রাহী",
+      "desc": "সামান্য আমলকেও বহুগুণে বৃদ্ধি করে পুরস্কৃতকারী। তিনি বান্দার的小小的 efforts কে স্বীকৃতি দেন এবং reward দেন।"
+    },
+    {
+      "number": 36,
+      "name": "ٱلْعَلِيُّ",
+      "transliteration": "আল-আলী",
+      "bn": "অত্যুচ্চ",
+      "desc": "মর্যাদা ও ক্ষমতায় সর্বোচ্চ। সকল সৃষ্টি তাঁর নিচে এবং তাঁরই আনুগত্য স্বীকার করে।"
+    },
+    {
+      "number": 37,
+      "name": "ٱلْكَبِيرُ",
+      "transliteration": "আল-কাবীর",
+      "bn": "মহানতম",
+      "desc": "সর্বাধিক মহান। তাঁর তুলনা করা যায় না এবং তিনি সকল সীমা ও সাদৃশ্য থেকে উর্ধ্বে।"
+    },
+    {
+      "number": 38,
+      "name": "ٱلْحَفِيظُ",
+      "transliteration": "আল-হাফিজ",
+      "bn": "সংরক্ষক",
+      "desc": "সমস্ত সৃষ্টিকে সংরক্ষণকারী। আসমান-জমিন এবং其间的一切 তিনি রক্ষা করেন।"
+    },
+    {
+      "number": 39,
+      "name": "ٱلْمُقِيتُ",
+      "transliteration": "আল-মুকীত",
+      "bn": "খাদ্য দানকারী",
+      "desc": "প্রতিটি প্রাণীর জন্য জীবনধারণের প্রয়োজনীয় খাদ্য ও শক্তি প্রদানকারী।"
+    },
+    {
+      "number": 40,
+      "name": "ٱلْحَسِيبُ",
+      "transliteration": "আল-হাসিব",
+      "bn": "হিসাব গ্রহণকারী",
+      "desc": "কিয়ামতের দিন সকলের কর্মের পূর্ণ হিসাব নেবেন। তিনি每一件事的 হিসাব রাখেন।"
+    },
+    {
+      "number": 41,
+      "name": "ٱلْجَلِيلُ",
+      "transliteration": "আল-জালীল",
+      "bn": "মহিমান্বিত",
+      "desc": "মহিমা ও মর্যাদার অধিকারী। তাঁর attributes and actions are full of majesty and glory."
+    },
+    {
+      "number": 42,
+      "name": "ٱلْكَرِيمُ",
+      "transliteration": "আল-কারীম",
+      "bn": "মহাদয়ালু",
+      "desc": "অত্যন্ত উদার ও মহানুভব। তিনি ask的最少但 give的最多।"
+    },
+    {
+      "number": 43,
+      "name": "ٱلرَّقِيبُ",
+      "transliteration": "আর-রকীব",
+      "bn": "সর্বনিয়ন্তা",
+      "desc": "সর্বদা সকল সৃষ্টির উপর নজর রাখেন। তাদের每一举动 তিনি দেখছেন।"
+    },
+    {
+      "number": 44,
+      "name": "ٱلْمُجِيبُ",
+      "transliteration": "আল-মুজিব",
+      "bn": "প্রত্যুত্তর দানকারী",
+      "desc": "বান্দাদের দোয়া ও প্রার্থনার উত্তরদাতা। তিনি ডাক শুনেন এবং respond করেন।"
+    },
+    {
+      "number": 45,
+      "name": "ٱلْوَاسِعُ",
+      "transliteration": "আল-ওয়াসি",
+      "bn": "সর্বব্যাপী",
+      "desc": "জ্ঞান, ক্ষমতা ও রহমতে সর্বব্যাপী। তাঁর দয়া ও অনুগ্রহ সকল কিছুকে পরিবেষ্টিত করেছে।"
+    },
+    {
+      "number": 46,
+      "name": "ٱلْحَكِيمُ",
+      "transliteration": "আল-হাকিম",
+      "bn": "সর্বজ্ঞ ও প্রজ্ঞাময়",
+      "desc": "প্রতিটি কাজ ও নির্দেশনায় প্রজ্ঞাপূর্ণ। তিনি সবকিছু যথাস্থানে রাখেন।"
+    },
+    {
+      "number": 47,
+      "name": "ٱلْوَدُودُ",
+      "transliteration": "আল-ওয়াদূদ",
+      "bn": "পরম স্নেহশীল",
+      "desc": "তাঁর obedient বান্দাদের প্রতি অগাধ ভালোবাসার অধিকারী। তিনি তাদেরকে ভালোবাসেন এবং তারা তাঁকে ভালোবাসে।"
+    },
+    {
+      "number": 48,
+      "name": "ٱلْمَجِيدُ",
+      "transliteration": "আল-মাজিদ",
+      "bn": "অতিমহिमান্বিত",
+      "desc": "মহিমা, গৌরব ও মর্যাদায় পরিপূর্ণ। তাঁর মর্যাদা ও শ্রেষ্ঠত্বের no end or limit."
+    },
+    {
+      "number": 49,
+      "name": "ٱلْبَاعِثُ",
+      "transliteration": "আল-বাইছ",
+      "bn": "পুনরুত্থানকারী",
+      "desc": "কিয়ামতের দিন মৃতদেরকে পুনরুজ্জীবিতকারী। তিনি তাদেরকে their graves থেকে উঠাবেন।"
+    },
+    {
+      "number": 50,
+      "name": "ٱلشَّهِيدُ",
+      "transliteration": "আশ-শাহিদ",
+      "bn": "সর্বজ্ঞ সাক্ষী",
+      "desc": "সর্বত্র উপস্থিত থেকে সকল কিছুর সাক্ষী। nothing is hidden from His observation."
+    },
+    {
+      "number": 51,
+      "name": "ٱلْحَقُّ",
+      "transliteration": "আল-হক্ব",
+      "bn": "সত্য",
+      "desc": "পরম সত্য। তাঁর অস্তিত্ব, কথা ও承诺 are absolutely true and certain."
+    },
+    {
+      "number": 52,
+      "name": "ٱلْوَكِيلُ",
+      "transliteration": "আল-ওয়াকীল",
+      "bn": "অভিভাবক",
+      "desc": "বান্দাদের কাজকর্মের দায়িত্ব গ্রহণকারী। যারা তাঁর উপর ভরসা করে, তিনি তাদের জন্য suffice হয়েছেন।"
+    },
+    {
+      "number": 53,
+      "name": "ٱلْقَوِيُّ",
+      "transliteration": "আল-ক্বাওয়ী",
+      "bn": "পরাক্রমশালী",
+      "desc": "অপরিমেয় শক্তির অধিকারী। তাঁর strength is perfect and nothing can overcome it."
+    },
+    {
+      "number": 54,
+      "name": "ٱلْمَتِينُ",
+      "transliteration": "আল-মাতীন",
+      "bn": "অটল শক্তিধর",
+      "desc": "অটল ও মজবুত শক্তির মালিক। তাঁর শক্তি never fails or weakens."
+    },
+    {
+      "number": 55,
+      "name": "ٱلْوَلِيُّ",
+      "transliteration": "আল-ওয়ালী",
+      "bn": "অভিভাবক",
+      "desc": "মুমিনদের বন্ধু ও সাহায্যকারী। তিনি তাদেরকে guidance and support দেন।"
+    },
+    {
+      "number": 56,
+      "name": "ٱلْحَمِيدُ",
+      "transliteration": "আল-হামিদ",
+      "bn": "প্রশংসনীয়",
+      "desc": "সমস্ত প্রশংসার যোগ্য। সকল সৃষ্টি স্বভাবতই তাঁর প্রশংসা করে।"
+    },
+    {
+      "number": 57,
+      "name": "ٱلْمُحْصِي",
+      "transliteration": "আল-মুহসি",
+      "bn": "গণনাকারী",
+      "desc": "সমস্ত事物的 পূর্ণ হিসাব রাখেন।每一件事, big or small, is counted and recorded by Him."
+    },
+    {
+      "number": 58,
+      "name": "ٱلْمُبْدِئُ",
+      "transliteration": "আল-মুবদী",
+      "bn": "আরম্ভদাতা",
+      "desc": "সৃষ্টিকে最初 থেকে শুরুকারী। তিনি without any model or precedent."
+    },
+    {
+      "number": 59,
+      "name": "ٱلْمُعِيدُ",
+      "transliteration": "আল-মুঈদ",
+      "bn": "পুনরায় সৃষ্টি করেন",
+      "desc": "কিয়ামতের দিন সৃষ্টিকে পুনরায় জীবিতকারী। তিনি easily bring back to life what He created."
+    },
+    {
+      "number": 60,
+      "name": "ٱلْمُحْيِي",
+      "transliteration": "আল-মুহই",
+      "bn": "জীবনদানকারী",
+      "desc": "প্রাণ সঞ্চারকারী। তিনি জীবিত করেন এবং death之后 আবার জীবিত করবেন।"
+    },
+    {
+      "number": 61,
+      "name": "ٱلْمُمِيتُ",
+      "transliteration": "আল-মুমিত",
+      "bn": "মৃত্যুদাতা",
+      "desc": "মৃত্যু ঘটানকারী। তিনি when and how He wills."
+    },
+    {
+      "number": 62,
+      "name": "ٱلْحَيُّ",
+      "transliteration": "আল-হাই",
+      "bn": "চিরঞ্জীব",
+      "desc": "চিরঞ্জীব ও চিরস্থায়ী। তাঁর জীবন eternal and perfect."
+    },
+    {
+      "number": 63,
+      "name": "ٱلْقَيُّومُ",
+      "transliteration": "আল-ক্বাইয়্যুম",
+      "bn": "অটল ধারক",
+      "desc": "স্বয়ংসম্পূর্ণ এবং সমগ্র সৃষ্টিজগতের ধারক। তিনি সকলের的需要 পূরণ করেন but needs nothing Himself."
+    },
+    {
+      "number": 64,
+      "name": "ٱلْوَاجِدُ",
+      "transliteration": "আল-ওয়াজিদ",
+      "bn": "সর্বপাওয়া",
+      "desc": "তিনি whatever He wills and never lacks anything."
+    },
+    {
+      "number": 65,
+      "name": "ٱلْمَاجِدُ",
+      "transliteration": "আল-মাজিদ",
+      "bn": "মহান",
+      "desc": "মহানুভব ও প্রশংসনীয়। His glory and generosity are immense."
+    },
+    {
+      "number": 66,
+      "name": "ٱلْواحِدُ",
+      "transliteration": "আল-ওয়াহিদ",
+      "bn": "অদ্বিতীয়",
+      "desc": "এক ও অভিন্ন। তাঁর সত্তা, গুণাবলী ও কার্যে কেউ শরীক নেই।"
+    },
+    {
+      "number": 67,
+      "name": "ٱلْأَحَدُ",
+      "transliteration": "আল-আহাদ",
+      "bn": "একমাত্র",
+      "desc": "পরম এক ও অদ্বিতীয়। তিনি অংশ, অংশীদার বা সদৃশ থেকে সম্পূর্ণ মুক্ত।"
+    },
+    {
+      "number": 68,
+      "name": "ٱلصَّمَدُ",
+      "transliteration": "আস-সামাদ",
+      "bn": "অভিভাবকমুক্ত",
+      "desc": "সকলের প্রয়োজন পূরণকারী,但他的 কোন প্রয়োজন নেই। সকলেই তাঁর মুখাপেক্ষী।"
+    },
+    {
+      "number": 69,
+      "name": "ٱلْقَادِرُ",
+      "transliteration": "আল-ক্বাদির",
+      "bn": "সর্বশক্তিমান",
+      "desc": "পূর্ণ ক্ষমতার অধিকারী। তিনি whatever He wills with perfect power and ability."
+    },
+    {
+      "number": 70,
+      "name": "ٱلْمُقْتَدِرُ",
+      "transliteration": "আল-মুক্তাদির",
+      "bn": "পরম ক্ষমতাধর",
+      "desc": "পরাক্রমশালী, যিনি His power perfectly and precisely according to His wisdom."
+    },
+    {
+      "number": 71,
+      "name": "ٱلْمُقَدِّمُ",
+      "transliteration": "আল-মুকাদ্দিম",
+      "bn": "অগ্রবর্তী",
+      "desc": "যাকে ইচ্ছা অগ্রসরকারী। He gives precedence to whom He wills."
+    },
+    {
+      "number": 72,
+      "name": "ٱلْمُؤَخِّرُ",
+      "transliteration": "আল-মুয়াখ্খির",
+      "bn": "পশ্চাৎকারী",
+      "desc": "যাকে ইচ্ছা পিছিয়ে দেন। He delays or puts back whom He wills."
+    },
+    {
+      "number": 73,
+      "name": "ٱلأَوَّلُ",
+      "transliteration": "আল-আউয়াল",
+      "bn": "প্রথম",
+      "desc": "সবকিছুর আগে存在 ছিলেন। His existence has no beginning."
+    },
+    {
+      "number": 74,
+      "name": "ٱلآخِرُ",
+      "transliteration": "আল-আখির",
+      "bn": "শেষ",
+      "desc": "সবকিছুর পরে থাকবেন। His existence has no end."
+    },
+    {
+      "number": 75,
+      "name": "ٱلظَّاهِرُ",
+      "transliteration": "আয-যাহির",
+      "bn": "প্রকাশ্য",
+      "desc": "তাঁর signs and creations are evident everywhere, showing His existence and power."
+    },
+    {
+      "number": 76,
+      "name": "ٱلْبَاطِنُ",
+      "transliteration": "আল-বা্তিন",
+      "bn": "অন্তর্যামী",
+      "desc": "গোপনীয়事物的 জ্ঞান রাখেন। He knows the innermost secrets and hidden matters."
+    },
+    {
+      "number": 77,
+      "name": "ٱلْوَالِي",
+      "transliteration": "আল-ওয়ালী",
+      "bn": "রক্ষক",
+      "desc": "বিশ্বজগতের পরিচালক ও রক্ষক। He governs all affairs and protects His creation."
+    },
+    {
+      "number": 78,
+      "name": "ٱلْمُتَعَالِي",
+      "transliteration": "আল-মুতা'আলী",
+      "bn": "অতিশ্রেষ্ঠ",
+      "desc": "সর্বোচ্চ মর্যাদার অধিকারী। He is exalted far above what the wrongdoers say about Him."
+    },
+    {
+      "number": 79,
+      "name": "ٱلْبَرُّ",
+      "transliteration": "আল-বারর",
+      "bn": "পরম কল্যাণকামী",
+      "desc": "অত্যন্ত দয়ালু ও kindness的源泉। He is kind to His creation and rewards them generously."
+    },
+    {
+      "number": 80,
+      "name": "ٱلتَّوَابُ",
+      "transliteration": "আত-তাওয়াব",
+      "bn": "তাওবা গ্রহণকারী",
+      "desc": "তওবা কবুলকারী। He accepts the repentance of those who sincerely turn to Him."
+    },
+    {
+      "number": 81,
+      "name": "ٱلْمُنْتَقِمُ",
+      "transliteration": "আল-মুনতাকিম",
+      "bn": "প্রতিশোধগ্রহণকারী",
+      "desc": "পাপাচারীদেরকে শাস্তিদাতা। He punishes the wrongdoers when they exceed all limits."
+    },
+    {
+      "number": 82,
+      "name": "ٱلْعَفُوُ",
+      "transliteration": "আল-আফু",
+      "bn": "ক্ষমাশীল",
+      "desc": "ক্ষমাপরায়ণ। He pardons sins and overlooks faults."
+    },
+    {
+      "number": 83,
+      "name": "ٱلرَّؤُوفُ",
+      "transliteration": "আর-রউফ",
+      "bn": "অত্যন্ত দয়ালু",
+      "desc": "অতি কোমল ও দয়ালু। His compassion and mercy are immense for His creation."
+    },
+    {
+      "number": 84,
+      "name": "مَالِكُ ٱلْمُلْكِ",
+      "transliteration": "মালিকুল-মুল্ক",
+      "bn": "সার্বভৌম ক্ষমতার মালিক",
+      "desc": "সমস্ত রাজত্বের মালিক। He gives kingdom to whom He wills and takes it away from whom He wills."
+    },
+    {
+      "number": 85,
+      "name": "ذُوالْجَلاَلِ وَالإكْرَامِ",
+      "transliteration": "যুল-জালালি-ওয়াল-ইকরাম",
+      "bn": "মহিমা ও সম্মানের অধিকারী",
+      "desc": "মহিমা ও সম্মানের মালিক। He is the Lord of Majesty and Generosity."
+    },
+    {
+      "number": 86,
+      "name": "ٱلْمُقْسِطُ",
+      "transliteration": "আল-মুকসিত",
+      "bn": "ন্যায়পরায়ণ বিচারক",
+      "desc": "ন্যায়বিচার প্রতিষ্ঠাকারী। He is just in His judgment and decisions."
+    },
+    {
+      "number": 87,
+      "name": "ٱلْجَامِعُ",
+      "transliteration": "আল-জামি",
+      "bn": "সংগ্রাহক",
+      "desc": "কিয়ামতের দিন সকল সৃষ্টিকে একত্রিতকারী। He will gather all creation for judgment."
+    },
+    {
+      "number": 88,
+      "name": "ٱلْغَنِيُّ",
+      "transliteration": "আল-গনিয়্য",
+      "bn": "অমুখাপেক্ষী",
+      "desc": "সম্পূর্ণ অভাবমুক্ত। He is free of all needs and everything depends on Him."
+    },
+    {
+      "number": 89,
+      "name": "ٱلْمُغْنِيُّ",
+      "transliteration": "আল-মুগনী",
+      "bn": "সম্পদদাতা",
+      "desc": "ধন-সম্পদ দানকারী। He enriches whom He wills and makes them self-sufficient."
+    },
+    {
+      "number": 90,
+      "name": "ٱلْمَانِعُ",
+      "transliteration": "আল-মানি",
+      "bn": "বাধাদানকারী",
+      "desc": "রক্ষাকারী ও বাধাদানকারী। He protects and prevents harm from reaching those He wills."
+    },
+    {
+      "number": 91,
+      "name": "ٱلضَّارُ",
+      "transliteration": "আদ-দারর",
+      "bn": "ক্ষতিসাধনকারী (পরীক্ষাকারী)",
+      "desc": "ক্ষতি ও adversity প্রেরণকারী। He tests His servants with hardships according to His wisdom."
+    },
+    {
+      "number": 92,
+      "name": "ٱلنَّافِعُ",
+      "transliteration": "আন-নাফি",
+      "bn": "উপকারদাতা",
+      "desc": "সমস্ত benefit ও goodness的源泉। All benefit comes from Him alone."
+    },
+    {
+      "number": 93,
+      "name": "ٱلنُّورُ",
+      "transliteration": "আন-নূর",
+      "bn": "আলোকদাতा",
+      "desc": "জ্যোতি ও guidanceের আলো দানকারী। He illuminates the hearts with faith and guidance."
+    },
+    {
+      "number": 94,
+      "name": "ٱلْهَادِي",
+      "transliteration": "আল-হাদি",
+      "bn": "পথপ্রদর্শক",
+      "desc": "সঠিক পথের দিশারী। He guides whom He wills to the straight path."
+    },
+    {
+      "number": 95,
+      "name": "ٱلْبَدِيعُ",
+      "transliteration": "আল-বদীউ",
+      "bn": "অদ্বিতীয় সৃষ্টিকর্তা",
+      "desc": "অদ্বিতীয় ও অপূর্ব সৃষ্টিকর্তা। He creates in perfect form without any prior example."
+    },
+    {
+      "number": 96,
+      "name": "ٱلْبَاقِي",
+      "transliteration": "আল-বাকি",
+      "bn": "চিরস্থায়ী",
+      "desc": "চিরস্থায়ী ও চিরঞ্জীব। He remains forever after all creation perishes."
+    },
+    {
+      "number": 97,
+      "name": "ٱلْوَارِثُ",
+      "transliteration": "আল-ওয়ারিস",
+      "bn": "সর্বশেষ উত্তরাধিকারী",
+      "desc": "সমস্ত সৃষ্টির শেষে everything will return to Him, and He will be the Eternal Inheritor."
+    },
+    {
+      "number": 98,
+      "name": "ٱلرَّشِيدُ",
+      "transliteration": "আর-রশিদ",
+      "bn": "সঠিক পথ প্রদর্শক",
+      "desc": "সর্বোত্তম পথনির্দেশক। He guides to the best way and manages all affairs perfectly."
+    },
+    {
+      "number": 99,
+      "name": "ٱلصَّبُورُ",
+      "transliteration": "আস-সাবুর",
+      "bn": "ধৈর্যশীল",
+      "desc": "অপরিমেয় ধৈর্যের অধিকারী। He does not haste in punishing the disobedient, giving them time to repent."
+    }
+  ]
+}

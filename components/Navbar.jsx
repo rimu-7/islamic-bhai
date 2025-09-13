@@ -4,8 +4,12 @@ import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { FiSearch, FiAlertTriangle, FiMenu, FiX } from "react-icons/fi";
+import { X } from "lucide-react";
 import ErrorReportPopup from "./ErrorReportPopup";
 import data from "@/public/ok.json";
+
+// Modal Component
+import NameModal from "@/app/impojfgbfb/allah-names/Modal";
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -13,6 +17,7 @@ export default function Navbar() {
   const [searchQuery, setSearchQuery] = useState("");
   const [results, setResults] = useState([]);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [selectedName, setSelectedName] = useState(null); // For modal
 
   const searchRef = useRef(null);
   const menuRef = useRef(null);
@@ -33,19 +38,43 @@ export default function Navbar() {
   // Filter search results
   // -----------------------------
   useEffect(() => {
-    if (!searchQuery.trim()) return setResults([]);
+    if (!searchQuery.trim()) {
+      setResults([]);
+      return;
+    }
 
     const query = searchQuery.toLowerCase();
 
     const filteredFeelings = data.feeling
-      .filter((item) => item.title.toLowerCase().includes(query))
-      .map((item) => ({ ...item, type: "feeling" }));
+      .filter((item) => item.title?.toLowerCase().includes(query))
+      .map((item) => ({
+        ...item,
+        type: "feeling",
+        path: `/feelings/${item.id || item.slug || ""}`
+      }));
 
     const filteredTopics = data.topics
-      .filter((item) => item.title.toLowerCase().includes(query))
-      .map((item) => ({ ...item, type: "topic" }));
+      .filter((item) => item.title?.toLowerCase().includes(query))
+      .map((item) => ({
+        ...item,
+        type: "topic",
+        path: `/topics/${item.id || item.slug || ""}`
+      }));
 
-    setResults([...filteredFeelings, ...filteredTopics]);
+    const filteredNames = data.names
+      .filter(
+        (item) =>
+          item.name?.toLowerCase().includes(query) ||
+          item.transliteration?.toLowerCase().includes(query) ||
+          item.bn?.toLowerCase().includes(query)
+      )
+      .map((item) => ({
+        ...item,
+        type: "names",
+        path: `/allah-names/${item.number}`
+      }));
+
+    setResults([...filteredFeelings, ...filteredTopics, ...filteredNames]);
   }, [searchQuery]);
 
   // -----------------------------
@@ -81,6 +110,18 @@ export default function Navbar() {
     document.body.style.overflow = isMenuOpen ? "hidden" : "unset";
     return () => (document.body.style.overflow = "unset");
   }, [isMenuOpen]);
+
+  // Handle search result click
+  const handleResultClick = (item) => {
+    if (item.type === "names") {
+      // Show modal for names
+      setSelectedName(item);
+    } else {
+      // Regular navigation for other types
+      setResults([]);
+      setSearchQuery("");
+    }
+  };
 
   // -----------------------------
   // Navbar style classes
@@ -151,20 +192,32 @@ export default function Navbar() {
                 {results.length > 0 && (
                   <div className="absolute top-full right-0 mt-2 w-64 xl:w-72 bg-white border border-gray-200 rounded-lg shadow-xl max-h-80 overflow-y-auto z-50">
                     {results.map((item, idx) => (
-                      <Link
-                        key={idx}
-                        href={item.path}
-                        className="search-result-item block px-4 py-3 text-sm text-gray-700 hover:bg-green-50 transition-colors border-b border-gray-100 last:border-b-0"
-                        onClick={() => {
-                          setResults([]);
-                          setSearchQuery("");
-                        }}
-                      >
-                        <div className="font-medium">{item.title}</div>
-                        <div className="text-xs text-gray-500 mt-1 capitalize">
-                          {item.type === "feeling" ? "Feeling" : "Topic"}
-                        </div>
-                      </Link>
+                      item.type === "names" ? (
+                        // For names, use a button to trigger modal
+                        <button
+                          key={idx}
+                          className="search-result-item block px-4 py-3 text-sm text-gray-700 hover:bg-green-50 transition-colors border-b border-gray-100 last:border-b-0 w-full text-left"
+                          onClick={() => handleResultClick(item)}
+                        >
+                          <div className="font-medium">{item.name}</div>
+                          <div className="text-xs text-gray-500 mt-1 capitalize">
+                            {item.type}
+                          </div>
+                        </button>
+                      ) : (
+                        // For other types, use Link for navigation
+                        <Link
+                          key={idx}
+                          href={item.path}
+                          className="search-result-item block px-4 py-3 text-sm text-gray-700 hover:bg-green-50 transition-colors border-b border-gray-100 last:border-b-0"
+                          onClick={() => handleResultClick(item)}
+                        >
+                          <div className="font-medium">{item.title}</div>
+                          <div className="text-xs text-gray-500 mt-1 capitalize">
+                            {item.type}
+                          </div>
+                        </Link>
+                      )
                     ))}
                   </div>
                 )}
@@ -227,21 +280,38 @@ export default function Navbar() {
               {results.length > 0 && (
                 <div className="absolute top-full left-0 mt-1 w-full bg-white border border-gray-200 rounded-lg shadow-lg max-h-60 overflow-y-auto z-50">
                   {results.map((item, idx) => (
-                    <Link
-                      key={idx}
-                      href={item.path}
-                      className="block px-4 py-3 text-sm text-gray-700 hover:bg-green-50 transition-colors border-b border-gray-100"
-                      onClick={() => {
-                        setResults([]);
-                        setSearchQuery("");
-                        setIsMenuOpen(false);
-                      }}
-                    >
-                      <div className="font-medium">{item.title}</div>
-                      <div className="text-xs text-gray-500 mt-1 capitalize">
-                        {item.type === "feeling" ? "Feeling" : "Topic"}
-                      </div>
-                    </Link>
+                    item.type === "names" ? (
+                      // For names, use a button to trigger modal
+                      <button
+                        key={idx}
+                        className="block px-4 py-3 text-sm text-gray-700 hover:bg-green-50 transition-colors border-b border-gray-100 w-full text-left"
+                        onClick={() => {
+                          handleResultClick(item);
+                          setIsMenuOpen(false);
+                        }}
+                      >
+                        <div className="font-medium">{item.name}</div>
+                        <div className="text-xs text-gray-500 mt-1 capitalize">
+                          {item.type}
+                        </div>
+                      </button>
+                    ) : (
+                      // For other types, use Link for navigation
+                      <Link
+                        key={idx}
+                        href={item.path}
+                        className="block px-4 py-3 text-sm text-gray-700 hover:bg-green-50 transition-colors border-b border-gray-100"
+                        onClick={() => {
+                          handleResultClick(item);
+                          setIsMenuOpen(false);
+                        }}
+                      >
+                        <div className="font-medium">{item.title}</div>
+                        <div className="text-xs text-gray-500 mt-1 capitalize">
+                          {item.type}
+                        </div>
+                      </Link>
+                    )
                   ))}
                 </div>
               )}
@@ -285,6 +355,14 @@ export default function Navbar() {
 
       {/* Error Report Popup */}
       <ErrorReportPopup isOpen={showErrorPopup} onClose={() => setShowErrorPopup(false)} />
+      
+      {/* Name Modal Popup */}
+      {selectedName && (
+        <NameModal 
+          selected={selectedName} 
+          onClose={() => setSelectedName(null)} 
+        />
+      )}
     </>
   );
 }

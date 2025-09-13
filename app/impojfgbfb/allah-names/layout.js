@@ -1,5 +1,3 @@
-
-
 export const metadata = {
   title: "আল্লাহর ৯৯ টি নাম -ইসলামিক ভাই",
 }

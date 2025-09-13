@@ -1,10 +1,12 @@
 "use client";
 
 import { lazy, Suspense, useEffect, useState } from "react";
-import { Search, X } from "lucide-react";
+import { Search } from "lucide-react";
 import { Skeleton } from "@/components/ui/skeleton";
 
-// Lazy load components
+// ✅ Correct way to import JSON
+import namesData from "@/public/ok.json";
+
 const Modal = lazy(() => import("./Modal"));
 
 export default function NamesPage() {
@@ -13,11 +15,11 @@ export default function NamesPage() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    // Simulate initial data loading
     const timer = setTimeout(() => setLoading(false), 1000);
     return () => clearTimeout(timer);
   }, []);
 
+  // Close modal with ESC
   useEffect(() => {
     const handleEsc = (e) => e.key === "Escape" && setSelected(null);
     window.addEventListener("keydown", handleEsc);
@@ -27,7 +29,10 @@ export default function NamesPage() {
   const truncate = (text, length = 25) =>
     text?.length > length ? text.slice(0, length) + "..." : text || "";
 
-  const names = data.data || [];
+  // ✅ Use the correct property
+  const names = namesData.names || [];
+
+  // ✅ Filter search by name, transliteration, or meaning
   const filtered = names.filter((item) =>
     [item.name, item.transliteration, item.bn?.meaning]
       .join(" ")
@@ -51,7 +56,7 @@ export default function NamesPage() {
 
         {/* Grid Skeleton */}
         <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-          {[...Array(9)].map((_, i) => (
+          {[...Array(27)].map((_, i) => (
             <div key={i} className="p-4 border border-gray-200 rounded-lg">
               <Skeleton className="h-20 w-full rounded" />
             </div>
@@ -90,9 +95,9 @@ export default function NamesPage() {
 
       {/* Grid */}
       <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-        {filtered.map((item, idx) => (
+        {filtered.map((item) => (
           <div
-            key={idx}
+            key={item.number}
             onClick={() => setSelected(item)}
             className="p-4 border border-gray-200 rounded-lg hover:bg-emerald-50 cursor-pointer transition-all shadow-sm hover:shadow-md"
           >
@@ -144,6 +149,3 @@ export default function NamesPage() {
     </main>
   );
 }
-
-// Separate Modal component (save this as components/Modal.jsx)
-
