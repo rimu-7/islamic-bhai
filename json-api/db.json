@@ -1,0 +1,552 @@
+{
+  "feeling": [
+    {
+      "title": "আমি রাগান্বিত বোধ করছি",
+      "path": "/feeling/angry",
+      "color": "bg-red-100"
+    },
+    {
+      "title": "আমি উদ্বিগ্ন বোধ করছি",
+      "path": "/feeling/anxious",
+      "color": "bg-amber-100"
+    },
+    {
+      "title": "আমি বিরক্ত বোধ করছি",
+      "path": "/feeling/bored",
+      "color": "bg-rose-100"
+    },
+    {
+      "title": "আমি আত্মবিশ্বাসী বোধ করছি",
+      "path": "/feeling/confident",
+      "color": "bg-green-100"
+    },
+    {
+      "title": "আমি বিভ্রান্ত বোধ করছি",
+      "path": "/feeling/confused",
+      "color": "bg-purple-100"
+    },
+    {
+      "title": "আমি সন্তুষ্ট বোধ করছি",
+      "path": "/feeling/content",
+      "color": "bg-emerald-100"
+    },
+    {
+      "title": "আমি হতাশাগ্রস্ত বোধ করছি",
+      "path": "/feeling/depressed",
+      "color": "bg-slate-100"
+    },
+    {
+      "title": "আমি সন্দিহান বোধ করছি",
+      "path": "/feeling/doubtful",
+      "color": "bg-gray-100"
+    },
+    {
+      "title": "আমি কৃতজ্ঞ বোধ করছি",
+      "path": "/feeling/grateful",
+      "color": "bg-yellow-100"
+    },
+    {
+      "title": "আমি লোভী বোধ করছি",
+      "path": "/feeling/greedy",
+      "color": "bg-orange-100"
+    },
+    {
+      "title": "আমি অপরাধবোধ করছি",
+      "path": "/feeling/guilty",
+      "color": "bg-blue-gray-100"
+    },
+    {
+      "title": "আমি সুখী বোধ করছি",
+      "path": "/feeling/happy",
+      "color": "bg-yellow-100"
+    },
+    {
+      "title": "আমি কষ্ট পাচ্ছি",
+      "path": "/feeling/hurt",
+      "color": "bg-pink-100"
+    },
+    {
+      "title": "আমি ভণ্ডামি করছি",
+      "path": "/feeling/hypocritical",
+      "color": "bg-rose-100"
+    },
+    {
+      "title": "আমি অস্থিরমনা বোধ করছি",
+      "path": "/feeling/indecisive",
+      "color": "bg-indigo-100"
+    },
+    {
+      "title": "আমি ঈর্ষান্বিত বোধ করছি",
+      "path": "/feeling/jealous",
+      "color": "bg-green-100"
+    },
+    {
+      "title": "আমি অলস বোধ করছি",
+      "path": "/feeling/lazy",
+      "color": "bg-cyan-100"
+    },
+    {
+      "title": "আমি একাকী বোধ করছি",
+      "path": "/feeling/lonely",
+      "color": "bg-cool-gray-100"
+    },
+    {
+      "title": "আমি পথহারা বোধ করছি",
+      "path": "/feeling/lost",
+      "color": "bg-gray-100"
+    },
+    {
+      "title": "আমি নার্ভাস বোধ করছি",
+      "path": "/feeling/nervous",
+      "color": "bg-amber-100"
+    },
+    {
+      "title": "আমি অভিভূত বোধ করছি",
+      "path": "/feeling/overwhelmed",
+      "color": "bg-purple-100"
+    },
+    {
+      "title": "আমি অনুতপ্ত বোধ করছি",
+      "path": "/feeling/regret",
+      "color": "bg-teal-100"
+    },
+    {
+      "title": "আমি দুঃখিত বোধ করছি",
+      "path": "/feeling/sad",
+      "color": "bg-blue-100"
+    },
+    {
+      "title": "আমি ভীত বোধ করছি",
+      "path": "/feeling/scared",
+      "color": "bg-violet-100"
+    },
+    {
+      "title": "আমি আত্মহত্যার প্রবণতায় ভুগছি",
+      "path": "/feeling/suicidal",
+      "color": "bg-red-100"
+    },
+    {
+      "title": "আমি ক্লান্ত বোধ করছি",
+      "path": "/feeling/tired",
+      "color": "bg-gray-100 "
+    },
+    {
+      "title": "আমি ভালোবাসাহীন বোধ করছি",
+      "path": "/feeling/unloved",
+      "color": "bg-pink-100"
+    },
+    {
+      "title": "আমি দুর্বল বোধ করছি",
+      "path": "/feeling/weak",
+      "color": "bg-warm-gray-100"
+    },
+    {
+      "title": "আমি প্রত্যাশায় আছি",
+      "path": "/feeling/anticipation",
+      "color": "bg-orange-100"
+    },
+    {
+      "title": "আমি উত্তেজিত বোধ করছি",
+      "path": "/feeling/aroused",
+      "color": "bg-red-100 "
+    },
+    {
+      "title": "আমি কৌতূহলী বোধ করছি",
+      "path": "/feeling/curious",
+      "color": "bg-amber-100"
+    },
+    {
+      "title": "আমি পরাজিত বোধ করছি",
+      "path": "/feeling/defeated",
+      "color": "bg-gray-100 "
+    },
+    {
+      "title": "আমি আকাঙ্ক্ষা বোধ করছি",
+      "path": "/feeling/desire",
+      "color": "bg-pink-100 "
+    },
+    {
+      "title": "আমি মরিয়া বোধ করছি",
+      "path": "/feeling/desperate",
+      "color": "bg-red-100 "
+    },
+    {
+      "title": "আমি দৃঢ়প্রতিজ্ঞ বোধ করছি",
+      "path": "/feeling/determined",
+      "color": "bg-green-100 "
+    },
+    {
+      "title": "আমি অবিশ্বাস বোধ করছি",
+      "path": "/feeling/disbelief",
+      "color": "bg-purple-100 "
+    },
+    {
+      "title": "আমি হিংসাপরায়ণ বোধ করছি",
+      "path": "/feeling/envious",
+      "color": "bg-emerald-100 "
+    },
+    {
+      "title": "আমি ঘৃণা বোধ করছি",
+      "path": "/feeling/hatred",
+      "color": "bg-rose-100 "
+    },
+    {
+      "title": "আমি অপমানিত বোধ করছি",
+      "path": "/feeling/humiliated",
+      "color": "bg-red-100 "
+    },
+    {
+      "title": "আমি অধীর বোধ করছি",
+      "path": "/feeling/impatient",
+      "color": "bg-orange-100"
+    },
+    {
+      "title": "আমি অনিরাপদ বোধ করছি",
+      "path": "/feeling/insecure",
+      "color": "bg-yellow-100"
+    },
+    {
+      "title": "আমি বিরক্ত বোধ করছি",
+      "path": "/feeling/irritated",
+      "color": "bg-amber-100 "
+    },
+    {
+      "title": "আমি ভালোবাসা বোধ করছি",
+      "path": "/feeling/love",
+      "color": "bg-pink-100 "
+    },
+    {
+      "title": "আমি নস্টালজিক বোধ করছি",
+      "path": "/feeling/nostalgic",
+      "color": "bg-purple-100 "
+    },
+    {
+      "title": "আমি অপমানিত বোধ করছি",
+      "path": "/feeling/offended",
+      "color": "bg-rose-100 "
+    },
+    {
+      "title": "আমি শান্তি বোধ করছি",
+      "path": "/feeling/peaceful",
+      "color": "bg-blue-100"
+    },
+    {
+      "title": "আমি প্রচণ্ড রাগান্বিত বোধ করছি",
+      "path": "/feeling/rage",
+      "color": "bg-red-100 "
+    },
+    {
+      "title": "আমি তৃপ্ত বোধ করছি",
+      "path": "/feeling/satisfied",
+      "color": "bg-green-100 "
+    },
+    {
+      "title": "আমি অনিশ্চিত বোধ করছি",
+      "path": "/feeling/uncertain",
+      "color": "bg-indigo-100"
+    },
+    {
+      "title": "আমি অস্বস্তি বোধ করছি",
+      "path": "/feeling/uneasy",
+      "color": "bg-cyan-100"
+    }
+  ],
+  "islamicContent": [
+    {
+      "src": "https://res.cloudinary.com/dub1bqk4s/image/upload/v1757271042/5-pillars-of-islam_u00pbn.jpg",
+      "title": "The Five Pillars of Islam",
+      "description": "Foundation of a Muslim's faith and practice",
+      "quote": "The best of you are those who learn the Quran and teach it.",
+      "path": "/impojfgbfb/pillars"
+    },
+    {
+      "src": "https://images.pexels.com/photos/29793227/pexels-photo-29793227.jpeg",
+      "title": "The Importance of Prayer",
+      "description": "Connecting with Allah five times daily",
+      "quote": "Indeed, prayer prohibits immorality and wrongdoing.",
+      "path": "/impojfgbfb/prayer"
+    },
+    {
+      "src": "https://images.pexels.com/photos/2233399/pexels-photo-2233399.jpeg",
+      "title": "The Month of Ramadan",
+      "description": "A time of fasting and spiritual reflection",
+      "quote": "When Ramadan begins, the gates of Paradise are opened.",
+      "path": "/impojfgbfb/ramadan"
+    },
+    {
+      "src": "https://images.pexels.com/photos/36704/pexels-photo.jpg",
+      "title": "The Holy Quran",
+      "description": "Divine guidance for humanity",
+      "quote": "So remember Me; I will remember you.",
+      "path": "/impojfgbfb/quran"
+    },
+    {
+      "src": "https://images.pexels.com/photos/4346403/pexels-photo-4346403.jpeg",
+      "title": "The Journey of Hajj",
+      "description": "Pilgrimage to the holy city of Makkah",
+      "quote": "And proclaim to the people the Hajj; they will come to you on foot and on every lean camel.",
+      "path": "/impojfgbfb/hajj"
+    }
+  ],
+
+  "banglaHadiths": [
+    {
+      "text": "যে ব্যক্তি আল্লাহর সন্তুষ্টির জন্য ইলম অর্জন করে, কিন্তু দুনিয়ার সম্মান লাভের উদ্দেশ্যে তা করে, সে জান্নাতের ঘ্রাণও পাবে না।",
+      "reference": "সুনানে আবু দাউদ, হাদিস নং ৩১৬৪"
+    },
+    {
+      "text": "তোমাদের মধ্যে সর্বোত্তম ব্যক্তি সে, যে কুরআন শেখে এবং অন্যকে শেখায়।",
+      "reference": "সহীহ বুখারী, হাদিস নং ৪৭৩৯"
+    },
+    {
+      "text": "সবচেয়ে উত্তম আমল হল নামাজকে তার নির্দিষ্ট সময়ে পড়া।",
+      "reference": "সহীহ বুখারী, হাদিস নং ৫২৭"
+    },
+    {
+      "text": "যে ব্যক্তি তার ভাইয়ের প্রয়োজন পূরণে সাহায্য করে, আল্লাহ তার প্রয়োজন পূরণে সাহায্য করেন।",
+      "reference": "সহীহ মুসলিম, হাদিস নং ২৫৮০"
+    },
+    {
+      "text": "ধৈর্য্য হলো ঈমানের অর্ধেক।",
+      "reference": "সুনানে তিরমিযী, হাদিস নং ৩৫১৮"
+    },
+    {
+      "text": "আল্লাহ তাআলা সে ব্যক্তির জন্য সহজ করে দেন, যে দানশীলতা প্রদর্শন করে।",
+      "reference": "সহীহ বুখারী, হাদিস নং ১৩৬৯"
+    },
+    {
+      "text": "সদাচরণ সদকা স্বরূপ।",
+      "reference": "সহীহ বুখারী, হাদিস নং ৫৬৭০"
+    },
+    {
+      "text": "জ্ঞানের কথা বলার সময় মিথ্যা বলা সবচেয়ে বড় মিথ্যা।",
+      "reference": "সহীহ মুসলিম, হাদিস নং ৫"
+    }
+  ],
+
+  "navLinks": [
+    { "name": "হোম", "path": "/" },
+    { "name": "দুয়া ও যিকির ", "path": "/dua-and-yikir" },
+    { "name": "কুরআন ", "path": "/quran" },
+    { "name": "আমি অনুভব করছি", "path": "/feeling" },
+    { "name": "নবীদের গল্প", "path": "/the-sotories-of-prophets" },
+    { "name": "সাহায্য করুন", "path": "/contact" }
+  ],
+
+  "topics": [
+    {
+      "title": "রমজানের দুয়ার তালিকা",
+      "description": "রমজানের প্রয়জনীয় প্রয়জনীয় প্রার্থনা সমূহার তালিকা",
+      "icon": "https://res.cloudinary.com/dub1bqk4s/image/upload/v1757243594/Picsart_25-09-07_17-11-18-589_mjf9ob.png",
+      "path": "/ramadan-duas",
+      "bgcolor": "bg-lime-100",
+      "bordercolor": "border-blue-200",
+      "textcolor": "text-blue-800",
+      "hoverEffect": "hover:shadow-lg hover:border-blue-300"
+    },
+    {
+      "title": "কিভাবে নামাজ আদায় করতে হয়",
+      "description": "ধাপে ধাপে প্রার্থনা নির্দেশিকা",
+      "icon": "https://res.cloudinary.com/dub1bqk4s/image/upload/v1757243596/Picsart_25-09-07_17-12-52-128_si8eop.png",
+      "path": "/how-to-pray",
+      "bgcolor": "bg-rose-100",
+      "bordercolor": "border-emerald-200",
+      "textcolor": "text-emerald-800",
+      "hoverEffect": "hover:shadow-lg hover:border-emerald-300"
+    },
+    {
+      "title": "আল্লাহর ৯৯ টি নাম",
+      "description": "আল্লাহর নাম সমূহের তালিকা এবং নামের সঠিক বর্ণনা",
+      "icon": "https://res.cloudinary.com/dub1bqk4s/image/upload/v1757243592/Picsart_25-09-07_17-09-58-850_wcto0m.png",
+      "path": "/allah-names",
+      "bgcolor": "bg-amber-100",
+      "bordercolor": "border-amber-200",
+      "textcolor": "text-amber-800",
+      "hoverEffect": "hover:shadow-lg hover:border-amber-300"
+    },
+    {
+      "title": "হাদিস",
+      "description": "ভবিষ্যদ্বাণীমূলক ঐতিহ্যের সংগ্রহ",
+      "icon": "https://res.cloudinary.com/dub1bqk4s/image/upload/v1757244157/Picsart_25-09-07_17-22-20-463_mbclob.png",
+      "path": "/hadiths",
+      "bgcolor": "bg-cyan-100",
+      "bordercolor": "border-cyan-200",
+      "textcolor": "text-cyan-800",
+      "hoverEffect": "hover:shadow-lg hover:border-cyan-300"
+    },
+    {
+      "title": "কুরআন",
+      "description": "প্রবিত্র কুরআন পড়ুন এবং শুনুন",
+      "icon": "https://res.cloudinary.com/dub1bqk4s/image/upload/v1757242299/Picsart_25-09-07_16-42-22-492_yeuduw.png",
+      "path": "/quran",
+      "bgcolor": "bg-green-100",
+      "bordercolor": "border-green-200",
+      "textcolor": "text-green-800",
+      "hoverEffect": "hover:shadow-lg hover:border-green-300"
+    },
+    {
+      "title": "দুয়া ও জিকির",
+      "description": "প্রতিদিনের প্রার্থনা এবং স্মরণ",
+      "icon": "https://res.cloudinary.com/dub1bqk4s/image/upload/v1757242315/Picsart_25-09-07_16-40-50-359_qz3eru.png",
+      "path": "/dua-dhikr",
+      "bgcolor": "bg-indigo-100",
+      "bordercolor": "border-indigo-200",
+      "textcolor": "text-indigo-800",
+      "hoverEffect": "hover:shadow-lg hover:border-indigo-300"
+    },
+    {
+      "title": "আমি যেমন অনুভব করছি",
+      "description": "আপনার অনুভূতির শিক নির্দেশনা এবং প্রার্থনা",
+      "icon": "https://res.cloudinary.com/dub1bqk4s/image/upload/v1757242303/Picsart_25-09-07_16-40-04-973_xwzzwy.png",
+      "path": "/feeling",
+      "bgcolor": "bg-pink-100",
+      "bordercolor": "border-pink-200",
+      "textcolor": "text-pink-800",
+      "hoverEffect": "hover:shadow-lg hover:border-pink-300"
+    },
+    {
+      "title": "হযরত মুহাম্মদ (সা:)",
+      "description": "নবীর জীবন ও শিক্ষা",
+      "icon": "https://res.cloudinary.com/dub1bqk4s/image/upload/v1757242310/Picsart_25-09-07_16-43-21-036_zckeop.png",
+      "path": "/prophet-muhammad",
+      "bgcolor": "bg-purple-100",
+      "bordercolor": "border-purple-200",
+      "textcolor": "text-purple-800",
+      "hoverEffect": "hover:shadow-lg hover:border-purple-300"
+    },
+    {
+      "title": "নবীদের জীবনী এবং শিক্ষা",
+      "description": "ইসলামের ইতিহাসের অনুপ্রেরণামূলক গল্পসমূহ",
+      "icon": "https://res.cloudinary.com/dub1bqk4s/image/upload/v1757242306/Picsart_25-09-07_16-46-30-280_gqtdjg.png",
+      "path": "/prophets-stories",
+      "bgcolor": "bg-orange-100",
+      "bordercolor": "border-orange-200",
+      "textcolor": "text-orange-800",
+      "hoverEffect": "hover:shadow-lg hover:border-orange-300"
+    }
+  ],
+
+  "supplications": {
+    "angry": {
+      "title": "রাগ নিয়ন্ত্রণের জন্য দু'আ",
+      "color": "text-green-600",
+      "items": [
+        {
+          "arabic": "أَعُوْذُ بِاللهِ مِنَ الشَّيْطَانِ الرَّجِيْمِ",
+          "transliteration": "আ'ঊযু বিল্লāহি মিনাশ শাইয়্ṭānir rajīm।",
+          "translation": "আমি বিতাড়িত শয়তান থেকে আল্লাহর আশ্রয় প্রার্থনা করছি।",
+          "reference": "কুরআন ১৬:৯৮"
+        },
+        {
+          "arabic": "رَبِّ أَعُوْذُ بِكَ مِنْ هَمَزَاتِ الشَّيَاطِيْنِ ، وَأَعُوذُ بِكَ رَبِّ أَنْ يَّحْضُرُوْنِ",
+          "transliteration": "রাব্বি আ‘ঊযু বিকা মিন হামazāতিশ শায়āṭীন। ওয়া আ‘ঊযু বিকা রাব্বি আই ইয়াহযুরূন।",
+          "translation": "হে আমার রব! আমি আপনার নিকট আশ্রয় প্রার্থনা করছি শয়তানের ধোঁকা থেকে এবং হে আমার রব! আমি আপনার নিকট আশ্রয় চাই, তারা যেন আমার নিকট উপস্থিত না হতে পারে।",
+          "reference": "কুরআন ২৩:৯৭-৯৮"
+        },
+        {
+          "arabic": "اَللّٰهُمَّ رَبَّ مُحَمَّدٍ اغْفِرْ لِيْ ذَنْبِيْ ، وَأَذْهِبْ غَيْظَ قَلْبِيْ ، وَأَعِذْنِيْ مِنْ مُضِلَّاتِ الْفِتَنِ",
+          "transliteration": "আল্লাহুম্মা রাব্বা মুহাম্মাদিনিগ-ফির লী ধানবী, ওয়া আয-হিব গাইযা কালবী, ওয়া আ‘ইযনী মিন মুযিল্লāতিল ফিতান।",
+          "translation": "হে আল্লাহ! মুহাম্মাদ ﷺ-এর রব, আমার গুনাহ ক্ষমা করে দিন, আমার হৃদয়ের ক্রোধ দূর করে দিন এবং আমাকে পথভ্রষ্টকারী ফিতনা থেকে রক্ষা করুন।",
+          "reference": "ইবনে আস-সুন্নী ৪৫৬"
+        },
+        {
+          "arabic": "اَللّٰهُمَّ بِعِلْمِكَ الْغَيْبَ ... وَاجْعَلْنَا هُدَاةً مُّهْتَدِيْنَ",
+          "transliteration": "আল্লাহুম্মা বিই‘লমিকাল গাইব... ওয়াজ-‘আলনā হুদāতাম মুহতাদীন।",
+          "translation": "হে আল্লাহ! আপনার গায়েবী জ্ঞানের মাধ্যমে... এবং আমাদেরকে পথপ্রদর্শক ও সৎপথপ্রাপ্ত বানিয়ে দিন।",
+          "reference": "নাসাঈ ১৩০৫"
+        }
+      ]
+    },
+    "anxious": {
+      "title": "দুশ্চিন্তা ও উদ্বেগের জন্য দু'আ",
+      "color": "text-green-600",
+      "items": [
+        {
+          "arabic": "حَسْبِيَ اللّٰهُ لَا إِلٰهَ إِلَّا هُوَ ، عَلَيْهِ تَوَكَّلْتُ ، وَهُوَ رَبُّ الْعَرْشِ الْعَظِيْمِ",
+          "transliteration": "হাসবিয়াল্লāহু লā ইলāহা ইল্লā হুয়া, ‘আলাইহি তাওয়াক্কালতু, ওয়া হুয়া রাব্বুল ‘আরশিল ‘আযীম।",
+          "translation": "আল্লাহই আমার জন্য যথেষ্ট। তিনি ছাড়া কোনো সত্য ইলাহ নেই। আমি একমাত্র তাঁর উপরই ভরসা করি এবং তিনি মহান ‘আরশের মালিক।",
+          "reference": "আবু দারদা (রাদিয়াল্লাহু ‘আনহু) থেকে বর্ণিত, রাসূলুল্লাহ ﷺ বলেছেন: যে ব্যক্তি সকাল-সন্ধ্যায় এ দোয়াটি সাত বার পড়বে, আল্লাহ তার সকল চিন্তা ও忧虑 দূর করে দিবেন। (ইবনে আস-সুন্নী ৭১)"
+        },
+        {
+          "arabic": "رَبِّ إِنِّيْ لِمَآ أَنْزَلْتَ إِلَيَّ مِنْ خَيْرٍ فَقِيْرٌ",
+          "transliteration": "রাব্বি ইন্নী লিমā আনযালতা ইলাইয়া মিন খাইরিন ফাকীর।",
+          "translation": "হে আমার রব! আপনি আমার নিকট যে কল্যাণই প্রেরণ করেন, আমি তার মুখাপেক্ষী।",
+          "reference": "কুরআন ২৮:২৪"
+        },
+        {
+          "arabic": "رَبِّ أَعُوْذُ بِكَ مِنْ هَمَزَاتِ الشَّيَاطِيْنِ ، وَأَعُوذُ بِكَ رَبِّ أَنْ يَّحْضُرُوْنِ",
+          "transliteration": "রাব্বি আ‘ঊযু বিকা মিন হামazāতিশ শায়āṭীন। ওয়া আ‘ঊযু বিকা রাব্বি আই ইয়াহযুরূন।",
+          "translation": "হে আমার রব! আমি আপনার নিকট আশ্রয় প্রার্থনা করছি শয়তানের ধোঁকা থেকে এবং হে আমার রব! আমি আপনার নিকট আশ্রয় চাই, তারা যেন আমার নিকট উপস্থিত না হতে পারে।",
+          "reference": "কুরআন ২৩:৯৭-৯৮"
+        },
+        {
+          "arabic": "رَبِّ أَنِّيْ مَسَّنِيَ الضُّرُّ وَأَنْتَ أَرْحَمُ الرّٰحِمِيْن",
+          "transliteration": "রাব্বি আন্নী মাসসানিয়াদ দুররু ওয়া আন্তা আরহামুর রাহীমীন।",
+          "translation": "হে আমার রব! নিশ্চয়ই আমাকে কষ্ট স্পর্শ করেছে এবং আপনি দয়ালুদের চেয়ে সর্বাধিক দয়ালু।",
+          "reference": "কুরআন ২১:৮৩"
+        },
+        {
+          "arabic": "لَا حَوْلَ وَلَا قُوَّةَ إِلَّا بِاللّٰهِ",
+          "transliteration": "লা হাওলা ওয়া লা কুওয়্যাতা ইল্লা বিল্লāh।",
+          "translation": "অনিষ্ট থেকে বিরত থাকার ও কল্যাণ অর্জনের কোনো শক্তি ও ক্ষমতা নেই except আল্লাহর মাধ্যমে।",
+          "reference": "রাসূলুল্লাহ ﷺ বলেছেন: এটি (‘লা hawলা...’) জান্নাতের গুপ্ত ভাণ্ডারসমূহের মধ্যে থেকে একটি ভাণ্ডার এবং জান্নাতের দরজাসমূহের মধ্যে একটি দরজা। (হাকিম, তিরমিজী)"
+        }
+      ]
+    },
+    "bored": {
+      "title": "বিরক্তি ও অবসাদের জন্য দু'আ",
+      "color": "text-green-600",
+      "items": [
+        {
+          "arabic": "رَبِّ إِنِّيْ لِمَآ أَنْزَلْتَ إِلَيَّ مِنْ خَيْرٍ فَقِيْرٌ",
+          "transliteration": "রাব্বি ইন্নী লিমā আনযালতা ইলাইয়া মিন খাইরিন ফাকীর।",
+          "translation": "হে আমার রব! আপনি আমার নিকট যে কল্যাণই প্রেরণ করেন, আমি তার মুখাপেক্ষী।",
+          "reference": "কুরআন ২৮:২৪"
+        },
+        {
+          "arabic": "اَللّٰهُمَّ إنَّا نَسْأَلُكَ مُوْجِبَاتِ رَحْمَتِكَ ، وَعَزَائِمَ مَغْفِرَتِكَ ، وَالسَّلَامَةَ مِنْ كُلِّ إِثْمٍ ، وَالْغَنِِيْمَةَ مِنْ كُلِّ بِرٍّ ، وَالْفَوْزَ بِالْجَنَّةِ ، وَالنَّجَاةَ مِنَ النَّارِ",
+          "transliteration": "আল্লাহুম্মা ইন্নā নাস’আলুকা মূজিবāতি রাহমাতিক, ওয়া ‘আযā’িমা মাগফিরাতিক, ওয়াস-সালāমata মিন কুল্লি ইথমিন, ওয়াল-গানীমata মিন কুল্লি বিররিন, ওয়াল-ফাউযা বিল জান্নati, ওয়ান-নাজāta মিনান নār।",
+          "translation": "হে আল্লাহ! আমরা আপনার নিকট প্রার্থনা করি আপনার রহমত লাভের কারণসমূহ, আপনার ক্ষমা অর্জনের দৃঢ় সংকল্প, সকল পাপ থেকে নিরাপত্তা, সকল সৎকাজ থেকে সফলতা, জান্নাত লাভ এবং জাহান্নাম থেকে মুক্তির জন্য।",
+          "reference": "আবদুল্লাহ ইবনে মাসউদ (রাদিয়াল্লাহু ‘আনহু) বলেন: রাসূলুল্লাহ ﷺ-এর দু'আসমূহের মধ্যে ছিল: [উপরের দু'আটি]। (হাকিম ১/৫২৫)"
+        },
+        {
+          "arabic": "اَللّٰهُمَّ مُصَرِّفَ الْقُلُوْبِ صَرِّفْ قُلُوْبَنَا عَلَىٰ طَاعَتِكَ",
+          "transliteration": "আল্লাহুম্মা মুসাররিফাল কুলূবি, সাররিফ কুলূবানā ‘আলā ṭā‘আতিক।",
+          "translation": "হে আল্লাহ! হৃদয়সমূহের পরিচালক, আমাদের হৃদয়গুলোকে আপনার আনুগত্যের দিকে ঘুরিয়ে দিন।",
+          "reference": "আবদুল্লাহ ইবনে আমর (রাদিয়াল্লাহু ‘আনহুমা) থেকে বর্ণিত, রাসূলুল্লাহ ﷺ বলেছেন: নিশ্চয়ই Ādam (আ.)-এর সন্তানদের সকলের হৃদয় দয়াময় আল্লাহর দু’আঙ্গুলের মাঝে থাকে, একটি হৃদয়ের মতো। তিনি সেগুলোকে যেদিকে ইচ্ছা পরিচালিত করেন। (মুসলিম ২৬৫৪)"
+        },
+        {
+          "arabic": "اَللّٰهُمَّ أَعِنِّيْ عَلَىٰ ذِكْرِكَ وَشُكْرِكَ وَحُسْنِ عِبَادَتِكَ",
+          "transliteration": "আল্লাহুম্মা আ‘ইন্নী ‘আলā যিকরিকা ওয়া শুকরিকা ওয়া হুসনি ‘ইবাদাতিক।",
+          "translation": "হে আল্লাহ! আপনাকে স্মরণ করতে, আপনার শুকরিয়া আদায় করতে এবং উত্তমরূপে আপনার ইবাদাত করতে আমাকে সাহায্য করুন।",
+          "reference": "মু'আয ইবনে জাবাল (রাদিয়াল্লাহু ‘আনহু) বর্ণনা করেন, রাসূলুল্লাহ ﷺ আমার হাত ধরে বললেন, 'হে মু'আয! আল্লাহর কসম, আমি তোমাকে ভালোবাসি। আল্লাহর কসম, আমি তোমাকে ভালোবাসি। হে মু'আয, আমি তোমাকে উপদেশ দিচ্ছি, প্রত্যেক সালাতের পর এই দোয়াটি পড়তে ভুলো না: [উপরের দোয়াটি]। (আবু দাউদ ১৫২২)"
+        }
+      ]
+    },
+    "confidence": {
+      "title": "আত্মবিশ্বাস বৃদ্ধির জন্য দু'আ",
+      "color": "text-green-600",
+      "items": [
+        {
+          "arabic": "رَبِّ أَوْزِعْنِيْٓ أَنْ أَشْكُرَ نِعْمَتَكَ الَّتِيْٓ أَنْعَمْتَ عَلَيَّ وَعَلَىٰ وَالِدَيَّ وَأَنْ أَعْمَلَ صَالِحً، وَأَنْ أَعْمَلَ صَالِحً وَأَدْخِلْنِيْ بِرَحْمَتِكَ فِيْ عِبَادِكَ الصَّالِحِيْنَ",
+          "transliteration": "রাব্বি আওজিনি আন আশকুরা নিমাতাকা-ল-লাতি আন'আমতা আলাইয়া ওয়া আলা ওয়ালিদাইয়া ওয়া আন আ'মালা সালিহান তারদাহ, ওয়া আদকিলনি বি-রহমতিকা ফি ইবাদিকা-শালিহিন।",
+          "translation": "হে আমার পালনকর্তা, আমাকে তোমার অনুগ্রহের কৃতজ্ঞতা প্রকাশ করার এবং তোমার পছন্দনীয় সৎকর্ম সম্পাদন করার তৌফিক দান করো। আর তোমার রহমতে আমাকে তোমার সৎকর্মশীল বান্দাদের অন্তর্ভুক্ত করো।",
+          "reference": "২৭:১৯"
+        },
+        {
+          "arabic": "رَبِّ أَوْزِعْنِيْٓ أَنْ أَشْكُرَ نِعْمَتَكَ الَّتِيْٓ أَنْعَمْتَ عَلَيَّ وَعَلَىٰ وَالِدَيَّ وَأَنْ أَعْمَلَ صَالِحً، وَأَنْ أَعْمَلَ صَالِحً وَأَصْلِحْ لِيْ فِيْ ذُرِّيَّتِيْ، إِنِّيْ تُبْتُ إِلَيْكَ وَإِنِّيْ مِنَ الْمُسْلِمِيْنَ",
+          "transliteration": "রাব্বি আওজিনি আন আশকুরা নি'মাতাকা-ল-লাতি আন'আমতা আলাইয়া ওয়া আলা ওয়ালিদাইয়া ওয়া আন আ'মালা সালিহান তারদাহ, ওয়া আছলিহ লি ফি ইন ধুরিয়ায়্যাতুয়্যাতুয়্যাত মিনা-এল-মুসলিম।",
+          "translation": "হে আমার পালনকর্তা, আমাকে তোমার অনুগ্রহের কৃতজ্ঞতা প্রকাশ করার এবং তোমার সন্তুষ্টি লাভের জন্য সৎকর্ম সম্পাদন করার তৌফিক দান করো। আমার সন্তানদেরকে সৎকর্মশীল করে তোলো। আমি তোমার কাছে তওবা করছি এবং আমি তোমার আনুগত্যকারীদের অন্তর্ভুক্ত।",
+          "reference": "৪৬:১৫"
+        },
+        {
+          "arabic": "اَللّٰهُمَّ يَا- فَاطِرَ السَّمٰوَاتِ وَالْأَرْضِ، أَنْتَ وَلِـيِّيْ فِي الدُّنْيَا وَالْآخِرَةِ، تَوَفَّنِيْ مُسْلِمِحْلِمْاً بِالصَّالِحِيْنَ",
+          "transliteration": "(আল্লাহুম্মা ইয়া) ফাতিরা-স-সামাওয়াতি ওয়া-ল-আরদি আন্তা ওয়ালি-য়ি ফি-দ-দুনিয়া ওয়াল-আখিরাহ, তাওয়াফ্ফানি মুসলিম-ওয়া আল-হিকনি বি-সা-সালিহিন।",
+          "translation": "(হে আল্লাহ!) আসমান ও যমীনের স্রষ্টা! তুমিই দুনিয়া ও আখেরাতে আমার অভিভাবক। আমাকে মুসলিম অবস্থায় মৃত্যু দাও এবং সৎকর্মশীলদের সাথে মিলিত করো।",
+          "reference": "১২:১০১"
+        }
+      ]
+    }
+  }
+
+}
