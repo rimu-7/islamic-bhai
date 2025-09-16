@@ -3,8 +3,7 @@
 import React, { useState } from "react";
 import WuduGuide from "./Wudu";
 import NamazGuide from "./Namaz";
-import ImportantSection from "@/components/ImportantSection";
-import { Skeleton } from "@/components/ui/skeleton";
+import ImportantSection from "../../../components/ImportantSection";
 
 export default function WuduNamazPage() {
   const [wuduConfirmed, setWuduConfirmed] = useState(false);

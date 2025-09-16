@@ -1,5 +1,5 @@
 // app/impojfgbfb/hadiths/[slug]/[chapter]/[id]/page.jsx
-import ImportantSection from "../../../../../components/ImportantSection";
+import ImportantSection from "../../../../../../components/ImportantSection";
 import HadithDetail from "./HadithDetails";
 
 const API_KEY = "$2y$10$NbVqFtzDKuUO6VANIGhnOOkt05IiCgs24N2TEHKGrLfuKmjkKOY6";

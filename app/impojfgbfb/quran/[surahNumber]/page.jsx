@@ -3,7 +3,7 @@ import { useEffect, useState, useRef } from "react";
 import axios from "axios";
 import { useParams, useRouter } from "next/navigation";
 import SurahDetails from "../SurahDetails";
-import ImportantSection from "@/components/ImportantSection";
+import ImportantSection from "../../../../components/ImportantSection";
 
 export default function SurahNumberPage() {
   const { surahNumber } = useParams(); // Next.js hook for dynamic params

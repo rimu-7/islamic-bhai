@@ -2,10 +2,10 @@
 
 import { lazy, Suspense, useEffect, useState } from "react";
 import { Search } from "lucide-react";
-import { Skeleton } from "@/components/ui/skeleton";
+import { Skeleton } from "../../../components/ui/skeleton";
 
 // ✅ Correct way to import JSON
-import namesData from "@/public/ok.json";
+import namesData from "../../../data/ok.json";
 
 const Modal = lazy(() => import("./Modal"));
 

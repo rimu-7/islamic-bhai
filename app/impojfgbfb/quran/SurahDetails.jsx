@@ -1,6 +1,6 @@
 "use client";
 import { Play, Pause, MoveLeft } from "lucide-react";
-import { Skeleton } from "@/components/ui/skeleton";
+import { Skeleton } from "../../../components/ui/skeleton";
 
 export default function SurahDetails({
   selectedSurah,

@@ -1,4 +1,4 @@
-import ImportantSection from "@/components/ImportantSection";
+import ImportantSection from "../../../components/ImportantSection";
 import NamesPage from "./Names";
 
 export default function FeelingsPage() {

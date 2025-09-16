@@ -1,5 +1,5 @@
 // app/impojfgbfb/hadiths/page.jsx
-import ImportantSection from "@/components/ImportantSection";
+import ImportantSection from "../../../components/ImportantSection";
 import BooksGrid from "./BooksGrid";
 
 const API_KEY = "$2y$10$NbVqFtzDKuUO6VANIGhnOOkt05IiCgs24N2TEHKGrLfuKmjkKOY6";
