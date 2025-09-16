@@ -1,17 +1,17 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
-import { Card, CardContent } from "@/components/ui/card";
+import { Card, CardContent } from "../components/ui/card";
 import {
   Carousel,
   CarouselContent,
   CarouselItem,
   CarouselNext,
   CarouselPrevious,
-} from "@/components/ui/carousel";
-import { ChevronLeft, ChevronRight} from "lucide-react";
+} from "../components/ui/carousel";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 import { useRouter } from "next/navigation";
-import { data } from "@/public/data";
+import { data } from "../public/data";
 
 const islamicContent = data.islamicContent;
 

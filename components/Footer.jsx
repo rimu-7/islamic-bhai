@@ -1,5 +1,4 @@
-// components/Footer.js
-import { data } from "@/public/data";
+import { data } from "../public/data";
 import Link from "next/link";
 import { FaFacebookF, FaTwitter, FaInstagram, FaYoutube } from "react-icons/fa";
 

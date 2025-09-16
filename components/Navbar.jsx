@@ -4,12 +4,11 @@ import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { FiSearch, FiAlertTriangle, FiMenu, FiX } from "react-icons/fi";
-import { X } from "lucide-react";
 import ErrorReportPopup from "./ErrorReportPopup";
-import data from "@/public/ok.json";
+import data from "../data/ok.json";
 
 // Modal Component
-import NameModal from "@/app/impojfgbfb/allah-names/Modal";
+import NameModal from "../app/impojfgbfb/allah-names/Modal";
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -145,7 +144,7 @@ export default function Navbar() {
   return (
     <>
       <nav className={navbarClasses} ref={menuRef}>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className=" mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
 
             {/* Logo */}

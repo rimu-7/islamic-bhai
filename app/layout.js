@@ -1,8 +1,8 @@
+import Navbar from "../components/Navbar";
 import "./globals.css";
-import Footer from "@/components/Footer";
-import Navbar from "@/components/Navbar";
 import { Hind_Siliguri } from "next/font/google";
 import { Amiri } from "next/font/google";
+import Footer from "../components/Footer";
 
 const hindSiliguri = Hind_Siliguri({
   subsets: ["bengali"],

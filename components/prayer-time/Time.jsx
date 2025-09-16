@@ -1,6 +1,7 @@
+"use client";
 import React, { useState, useEffect, useCallback } from "react";
 import { MapPin, Sun, Sunrise, Sunset, Clock, CircleAlert } from "lucide-react";
-import { Skeleton } from "@/components/ui/skeleton";
+import { Skeleton } from "../ui/skeleton";
 
 // Debounce utility to limit API calls
 const debounce = (func, wait) => {

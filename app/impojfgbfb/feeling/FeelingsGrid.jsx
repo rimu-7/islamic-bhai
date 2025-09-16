@@ -1,8 +1,8 @@
-import { data } from "@/public/data";
 import Link from "next/link";
+import data from "../../../data/ok.json"
 
 const FeelingsGrid = () => {
-const feelings = data.feeling;
+  const feelings = data.feeling;
 
   return (
     <div className="p-4">
