@@ -3,13 +3,15 @@ import { useState, useEffect } from "react";
 import { AlertCircle } from "lucide-react";
 import { Skeleton } from "../../../../components/ui/skeleton";
 import ImportantSection from "../../../../components/ImportantSection";
-
+import FeelingNavigation from "./FeelingNav";
+import { ShowPopup } from "../../../../components/ShowPopup";
 export default function FeelingClient({ slug, feelingData, supplicationData }) {
   const [hydrated, setHydrated] = useState(false);
 
   useEffect(() => {
-    setHydrated(true);
-  }, [2000]);
+    const timer = setTimeout(() => setHydrated(true), 1000);
+    return () => clearTimeout(timer);
+  }, []);
 
   if (!hydrated) {
     return (
@@ -53,17 +55,14 @@ export default function FeelingClient({ slug, feelingData, supplicationData }) {
     return (
       <div className="min-h-screen py-8 px-4">
         <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-8">
-          {/* Left side (Feelings grid, takes 2/3 space) */}
           <div className="lg:col-span-2">
-            <div className=" min-h-96 flex flex-col items-center justify-center bg-gradient-to-br from-emerald-50 to-green-100 p-4 rounded-lg">
+            <div className="min-h-96 flex flex-col items-center justify-center bg-gradient-to-br from-emerald-50 to-green-100 p-4 rounded-lg">
               <AlertCircle className="h-10 w-10 text-red-500 mx-auto mb-3" />
               <p className="text-red-600 font-medium">
                 No supplications found for "{slug}".
               </p>
             </div>
           </div>
-
-          {/* Right side (ImportantSection, takes 1/3 space) */}
           <div>
             <ImportantSection />
           </div>
@@ -72,10 +71,21 @@ export default function FeelingClient({ slug, feelingData, supplicationData }) {
     );
   }
 
+  const allFeelings = supplicationData ? Object.keys(supplicationData) : [];
+  const feelingKeys = Object.keys(supplicationData || {});
+  const currentIndex = feelingKeys.indexOf(slug);
+
+  const prevFeeling = currentIndex > 0 ? feelingKeys[currentIndex - 1] : null;
+  const nextFeeling =
+    currentIndex < feelingKeys.length - 1
+      ? feelingKeys[currentIndex + 1]
+      : null;
+
   return (
     <div className="min-h-screen py-8 px-4">
+      <ShowPopup/>
       <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-8">
-        {/* Left side (2/3) */}
+        {/* Left side */}
         <div className="lg:col-span-2">
           <div className="p-4">
             <div
@@ -93,7 +103,9 @@ export default function FeelingClient({ slug, feelingData, supplicationData }) {
             <div className="space-y-8">
               {supplicationData.items.map((item, index) => (
                 <div key={index} className="space-y-4">
-                  <h3 className="text-xl font-semibold text-red-600">#{item.id}</h3>
+                  <h3 className="text-xl font-semibold text-red-600">
+                    #{item.id}
+                  </h3>
                   <div className="p-4 bg-green-50 rounded-lg">
                     <p className="text-right text-2xl mb-2 font-arabic">
                       {item.arabic}
@@ -102,7 +114,6 @@ export default function FeelingClient({ slug, feelingData, supplicationData }) {
                       {item.transliteration}
                     </p>
                     <p className="text-gray-600">{item.translation}</p>
-
                     {item.reference && (
                       <div className="mt-2 p-2 bg-green-100 rounded">
                         <p className="text-sm text-green-800">
@@ -114,10 +125,13 @@ export default function FeelingClient({ slug, feelingData, supplicationData }) {
                 </div>
               ))}
             </div>
+
+            {/* Prev / Next Navigation */}
+            <FeelingNavigation slug={slug} />
           </div>
         </div>
 
-        {/* Right side (1/3) */}
+        {/* Right side */}
         <div>
           <ImportantSection />
         </div>

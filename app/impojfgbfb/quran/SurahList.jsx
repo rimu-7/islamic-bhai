@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
-import { Input } from "@/components/ui/input";
-import { Skeleton } from "@/components/ui/skeleton";
+import { Input } from "../../../components/ui/input";
+import { Skeleton } from "../../../components/ui/skeleton";
 
 export default function SurahList({ surahs, error, fetchSurahs, onSelect }) {
   const [searchTerm, setSearchTerm] = useState("");

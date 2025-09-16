@@ -1282,6 +1282,11 @@
           "info1": "বুরদা (রাযিঃ) বর্ণনা করেন যে, আমরা (সাহাবীগণ) বসে ছিলাম যখন রাসূলুল্লাহ সাল্লাল্লাহু আলাইহি ওয়াসাল্লাম এলেন। তিনি বললেন: “এমন কোন সকাল হয়নি যেখানে আমি ১০০ বার আল্লাহর কাছে ক্ষমা প্রার্থনা করিনি।” (তাবারানী, মু'জামুল আওসাত ৩৮৭৯)"
         }
       ]
+    },
+    "evening":{
+      "title": "সন্ধ্যার যিকির",
+      "id": "evening",
+      "sections": []
     }
   },
   "islamicContent": [
@@ -1396,90 +1401,90 @@
       "title": "রমজানের দুয়ার তালিকা",
       "description": "রমজানের প্রয়জনীয় প্রয়জনীয় প্রার্থনা সমূহার তালিকা",
       "icon": "https://res.cloudinary.com/dub1bqk4s/image/upload/v1757243594/Picsart_25-09-07_17-11-18-589_mjf9ob.png",
-      "path": "/ramadan-duas",
-      "bgcolor": "bg-lime-100",
-      "bordercolor": "border-blue-200",
-      "textcolor": "text-blue-800",
-      "hoverEffect": "hover:shadow-lg hover:border-blue-300"
+      "path": "/impojfgbfb/ramadan-duas",
+      "bgColor": "bg-lime-100",
+      "borderColor": "border-blue-200",
+      "textColor": "text-lime-800",
+      "hoverEffect": "hover:shadow-lg hover:border-lime-300"
     },
     {
       "title": "কিভাবে নামাজ আদায় করতে হয়",
       "description": "ধাপে ধাপে প্রার্থনা নির্দেশিকা",
       "icon": "https://res.cloudinary.com/dub1bqk4s/image/upload/v1757243596/Picsart_25-09-07_17-12-52-128_si8eop.png",
-      "path": "/how-to-pray",
-      "bgcolor": "bg-rose-100",
-      "bordercolor": "border-emerald-200",
-      "textcolor": "text-emerald-800",
-      "hoverEffect": "hover:shadow-lg hover:border-emerald-300"
+      "path": "/impojfgbfb/how-to-pray",
+      "bgColor": "bg-rose-100",
+      "borderColor": "border-emerald-200",
+      "textColor": "text-rose-800",
+      "hoverEffect": "hover:shadow-lg hover:border-rose-300"
     },
     {
       "title": "আল্লাহর ৯৯ টি নাম",
       "description": "আল্লাহর নাম সমূহের তালিকা এবং নামের সঠিক বর্ণনা",
       "icon": "https://res.cloudinary.com/dub1bqk4s/image/upload/v1757243592/Picsart_25-09-07_17-09-58-850_wcto0m.png",
-      "path": "/allah-names",
-      "bgcolor": "bg-amber-100",
-      "bordercolor": "border-amber-200",
-      "textcolor": "text-amber-800",
+      "path": "/impojfgbfb/allah-names",
+      "bgColor": "bg-amber-100",
+      "borderColor": "border-amber-200",
+      "textColor": "text-amber-800",
       "hoverEffect": "hover:shadow-lg hover:border-amber-300"
     },
     {
       "title": "হাদিস",
       "description": "ভবিষ্যদ্বাণীমূলক ঐতিহ্যের সংগ্রহ",
       "icon": "https://res.cloudinary.com/dub1bqk4s/image/upload/v1757244157/Picsart_25-09-07_17-22-20-463_mbclob.png",
-      "path": "/hadiths",
-      "bgcolor": "bg-cyan-100",
-      "bordercolor": "border-cyan-200",
-      "textcolor": "text-cyan-800",
+      "path": "/impojfgbfb/hadiths",
+      "bgColor": "bg-cyan-100",
+      "borderColor": "border-cyan-200",
+      "textColor": "text-cyan-800",
       "hoverEffect": "hover:shadow-lg hover:border-cyan-300"
     },
     {
       "title": "কুরআন",
       "description": "প্রবিত্র কুরআন পড়ুন এবং শুনুন",
       "icon": "https://res.cloudinary.com/dub1bqk4s/image/upload/v1757242299/Picsart_25-09-07_16-42-22-492_yeuduw.png",
-      "path": "/quran",
-      "bgcolor": "bg-green-100",
-      "bordercolor": "border-green-200",
-      "textcolor": "text-green-800",
+      "path": "/impojfgbfb/quran",
+      "bgColor": "bg-green-100",
+      "borderColor": "border-green-200",
+      "textColor": "text-green-800",
       "hoverEffect": "hover:shadow-lg hover:border-green-300"
     },
     {
       "title": "দুয়া ও জিকির",
       "description": "প্রতিদিনের প্রার্থনা এবং স্মরণ",
       "icon": "https://res.cloudinary.com/dub1bqk4s/image/upload/v1757242315/Picsart_25-09-07_16-40-50-359_qz3eru.png",
-      "path": "/dua-dhikr",
-      "bgcolor": "bg-indigo-100",
-      "bordercolor": "border-indigo-200",
-      "textcolor": "text-indigo-800",
+      "path": "/impojfgbfb/dua-and-yikir",
+      "bgColor": "bg-indigo-100",
+      "borderColor": "border-indigo-200",
+      "textColor": "text-indigo-800",
       "hoverEffect": "hover:shadow-lg hover:border-indigo-300"
     },
     {
       "title": "আমি যেমন অনুভব করছি",
       "description": "আপনার অনুভূতির শিক নির্দেশনা এবং প্রার্থনা",
       "icon": "https://res.cloudinary.com/dub1bqk4s/image/upload/v1757242303/Picsart_25-09-07_16-40-04-973_xwzzwy.png",
-      "path": "/feeling",
-      "bgcolor": "bg-pink-100",
-      "bordercolor": "border-pink-200",
-      "textcolor": "text-pink-800",
+      "path": "/impojfgbfb/feeling",
+      "bgColor": "bg-pink-100",
+      "borderColor": "border-pink-200",
+      "textColor": "text-pink-800",
       "hoverEffect": "hover:shadow-lg hover:border-pink-300"
     },
     {
       "title": "হযরত মুহাম্মদ (সা:)",
       "description": "নবীর জীবন ও শিক্ষা",
       "icon": "https://res.cloudinary.com/dub1bqk4s/image/upload/v1757242310/Picsart_25-09-07_16-43-21-036_zckeop.png",
-      "path": "/prophet-muhammad",
-      "bgcolor": "bg-purple-100",
-      "bordercolor": "border-purple-200",
-      "textcolor": "text-purple-800",
+      "path": "/impojfgbfb/prophet-muhammad",
+      "bgColor": "bg-purple-100",
+      "borderColor": "border-purple-200",
+      "textColor": "text-purple-800",
       "hoverEffect": "hover:shadow-lg hover:border-purple-300"
     },
     {
       "title": "নবীদের জীবনী এবং শিক্ষা",
       "description": "ইসলামের ইতিহাসের অনুপ্রেরণামূলক গল্পসমূহ",
       "icon": "https://res.cloudinary.com/dub1bqk4s/image/upload/v1757242306/Picsart_25-09-07_16-46-30-280_gqtdjg.png",
-      "path": "/prophets-stories",
-      "bgcolor": "bg-orange-100",
-      "bordercolor": "border-orange-200",
-      "textcolor": "text-orange-800",
+      "path": "/impojfgbfb/prophets-stories",
+      "bgColor": "bg-orange-100",
+      "borderColor": "border-orange-200",
+      "textColor": "text-orange-800",
       "hoverEffect": "hover:shadow-lg hover:border-orange-300"
     }
   ],

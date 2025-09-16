@@ -14,10 +14,10 @@ export function Popup({ isOpen, onClose, title, children }) {
           <h2 className="text-2xl font-bold text-gray-800">{title}</h2>
           <button
             onClick={onClose}
-            className="text-gray-500 hover:text-gray-700 text-2xl font-bold"
+            className="text-red-500 flex items-center hover:text-red-700 font-bold"
             aria-label="Close popup"
           >
-            <X className="w-6 h-6" />
+           বন্ধ করুন <X className="w-6 h-6" />
           </button>
         </div>
 

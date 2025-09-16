@@ -1,4 +1,5 @@
 import ImportantSection from "../../../../components/ImportantSection";
+import { ShowPopup } from "../../../../components/ShowPopup";
 import { getZikrBySlug } from "../zikr";
 import ZikrClient from "./ZikrClient";
 
@@ -16,6 +17,7 @@ export default function ZikrPage({ params }) {
 
   return (
     <div className="">
+      <ShowPopup/>
       <div className="min-h-screen py-8 px-4">
         <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-8">
           {/* Left side (Feelings grid, takes 2/3 space) */}

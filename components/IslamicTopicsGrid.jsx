@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { data } from "../public/data";
+import data from "../data/ok.json";
 
 const IslamicTopicsGrid = () => {
   const topics = data.topics;
