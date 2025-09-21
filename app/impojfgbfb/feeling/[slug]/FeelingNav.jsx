@@ -1,8 +1,8 @@
 // components/FeelingNavigation.jsx
-"use client";
-
 import Link from "next/link";
-import data from "../../../../data/ok.json";
+import { motion } from "framer-motion";
+import data from "@/public/ok.json";
+import { ArrowLeft, ArrowRight, Sparkles } from "lucide-react";
 
 export default function FeelingNavigation({ slug }) {
   const feelings = data.feeling;
@@ -14,56 +14,54 @@ export default function FeelingNavigation({ slug }) {
   // --- 🎲 Pick 3 random suggestions (excluding current slug) ---
   const suggestions = feelings
     .filter((f) => !f.path.endsWith(slug))
-    .sort(() => 0.5 - Math.random()) // shuffle
-    .slice(0, 3); // take 3
+    .sort(() => 0.5 - Math.random())
+    .slice(0, 3);
 
   return (
-    <div className="mt-10 space-y-8">
-      {/* Prev / Next Navigation */}
-      <div className="flex justify-between items-center">
+    <div className="mt-12 space-y-12">
+      <div className="flex justify-between items-center flex-wrap gap-4">
         {prevFeeling ? (
-          <Link
-            href={`/impojfgbfb${prevFeeling.path}`}
-            className="flex items-center gap-2 px-4 py-2 rounded-lg bg-emerald-100 text-green-700 font-medium shadow-sm hover:bg-emerald-200 hover:shadow-md transition"
-          >
-            <span className="text-xl">⬅</span>
-            <span>{prevFeeling.title}</span>
+          <Link href={`/impojfgbfb${prevFeeling.path}`}>
+            <div className="flex items-center justify-center gap-2 h-24 w-72 rounded-xl bg-gradient-to-l from-emerald-50 to-emerald-100 text-green-700 font-medium  transition">
+              <ArrowLeft className="w-5 h-5" />
+              <span className="truncate">{prevFeeling.title}</span>
+            </div>
           </Link>
         ) : (
-          <span className="px-4 py-2 opacity-30 text-gray-400 select-none">
-            ⬅ পূর্ববর্তী নেই
+          <span className="flex items-center justify-center gap-2 h-12 w-40 rounded-xl bg-gray-100 text-gray-400 select-none">
+            <ArrowLeft className="w-5 h-5 opacity-50" /> পূর্ববর্তী নেই
           </span>
         )}
 
         {nextFeeling ? (
-          <Link
-            href={`/impojfgbfb${nextFeeling.path}`}
-            className="flex items-center gap-2 px-4 py-2 rounded-lg bg-emerald-100 text-green-700 font-medium shadow-sm hover:bg-emerald-200 hover:shadow-md transition"
-          >
-            <span>{nextFeeling.title}</span>
-            <span className="text-xl">➡</span>
+          <Link href={`/impojfgbfb${nextFeeling.path}`}>
+            <div className="flex items-center justify-center gap-2  h-24 w-72 rounded-xl bg-gradient-to-r from-emerald-50 to-emerald-100 text-green-700 font-medium  transition">
+              <span className="truncate">{nextFeeling.title}</span>
+              <ArrowRight className="w-5 h-5" />
+            </div>
           </Link>
         ) : (
-          <span className="px-4 py-2 opacity-30 text-gray-400 select-none">
-            পরবর্তী নেই ➡
+          <span className="flex items-center justify-center gap-2 h-12 w-40 rounded-xl bg-gray-100 text-gray-400 select-none">
+            পরবর্তী নেই <ArrowRight className="w-5 h-5 opacity-50" />
           </span>
         )}
       </div>
 
-      {/* Random Suggestions */}
-      <div className="mt-6">
-        <h2 className="text-lg font-semibold text-gray-700 mb-4 text-center">
-          আরও অনুভূতি অন্বেষণ করুন ✨
+      <div>
+        <h2 className="text-xl font-semibold text-gray-800 mb-6 text-center flex items-center justify-center gap-2">
+          <Sparkles className="w-5 h-5 text-emerald-500" />
+          আরও অনুভূতি অন্বেষণ করুন
+          <Sparkles className="w-5 h-5 text-emerald-500" />
         </h2>
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {suggestions.map((f, idx) => (
             <Link key={idx} href={`/impojfgbfb${f.path}`}>
               <div
-                className={`p-4 rounded shadow-sm hover:shadow-lg transition cursor-pointer text-center h-32 flex items-center justify-center ${f.color}`}
+                className={`p-6 rounded-2xl hover:shadow-xl transition cursor-pointer text-center h-36 flex items-center justify-center ${f.color}`}
               >
-                <h3 className="text-lg font-semibold">{f.title}</h3>
+                <h3 className="text-lg font-bold text-gray-800">{f.title}</h3>
               </div>
-              
             </Link>
           ))}
         </div>

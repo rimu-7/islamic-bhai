@@ -1,5 +1,5 @@
 import Link from "next/link";
-import data from "../../../data/ok.json";
+import data from "@/public/ok.json";
 
 const FeelingsGrid = () => {
   const feelings = data.feeling;
@@ -15,7 +15,7 @@ const FeelingsGrid = () => {
         </p>
       </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
         {feelings.map((feeling, index) => (
           <Link href={`/impojfgbfb/${feeling.path}`} key={index}>
             <div

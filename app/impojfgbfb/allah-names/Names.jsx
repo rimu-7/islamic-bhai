@@ -2,10 +2,10 @@
 
 import { lazy, Suspense, useEffect, useState } from "react";
 import { Search } from "lucide-react";
-import { Skeleton } from "../../../components/ui/skeleton";
+import { Skeleton } from "@/components/ui/skeleton";
+import namesData from "@/public/ok.json";
 
 // ✅ Correct way to import JSON
-import namesData from "../../../data/ok.json";
 
 const Modal = lazy(() => import("./Modal"));
 
@@ -70,7 +70,7 @@ export default function NamesPage() {
     <main className="min-h-screen py-12">
       {/* Header */}
       <div className="max-w-4xl mx-auto text-center mb-14">
-        <h1 className="text-5xl md:text-6xl font-extrabold text-green-500 drop-shadow-sm mb-4">
+        <h1 className="bg-gradient-to-r from-purple-500 via-teal-500 to-red-500 text-transparent bg-clip-text text-3xl md:text-5xl font-extrabold mb-4">
           আসমাউল হুসনা
         </h1>
         <p className="text-lg md:text-xl text-gray-700">

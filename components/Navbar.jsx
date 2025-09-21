@@ -3,12 +3,15 @@
 import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { FiSearch, FiAlertTriangle, FiMenu, FiX } from "react-icons/fi";
 import ErrorReportPopup from "./ErrorReportPopup";
-import data from "../data/ok.json";
+import data from "@/public/ok.json";
 
 // Modal Component
 import NameModal from "../app/impojfgbfb/allah-names/Modal";
+import { Search } from "lucide-react";
+import { AlertTriangle } from "lucide-react";
+import { X } from "lucide-react";
+import { Menu } from "lucide-react";
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -185,7 +188,7 @@ export default function Navbar() {
                   onChange={(e) => setSearchQuery(e.target.value)}
                   className="border border-gray-300 rounded-full pl-4 pr-10 py-2 text-sm w-40 xl:w-52 focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent transition-all"
                 />
-                <FiSearch className="absolute right-3 top-2.5 h-4 w-4 text-gray-500" />
+                <Search className="absolute right-3 top-2.5 h-4 w-4 text-gray-500" />
 
                 {/* Search Results Dropdown */}
                 {results.length > 0 && (
@@ -227,7 +230,7 @@ export default function Navbar() {
                 onClick={() => setShowErrorPopup(true)}
                 className="bg-red-500 hover:bg-red-500 text-white px-4 py-2 rounded-full flex items-center transition-colors shadow-md hover:shadow-lg"
               >
-                <FiAlertTriangle className="w-4 h-4 mr-1" />
+                <AlertTriangle className="w-4 h-4 mr-1" />
                 ভুল রিপোর্ট
               </button>
             </div>
@@ -242,7 +245,7 @@ export default function Navbar() {
                 aria-label="Search"
                 className="p-2 text-gray-700 hover:text-green-500 rounded-full hover:bg-gray-100 transition-colors"
               >
-                <FiSearch className="h-5 w-5" />
+                <Search className="h-5 w-5" />
               </button>
 
               <button
@@ -250,7 +253,7 @@ export default function Navbar() {
                 aria-label="Toggle menu"
                 className="text-gray-700 hover:text-green-500 p-2 rounded-md hover:bg-gray-100 transition-colors"
               >
-                {isMenuOpen ? <FiX className="h-6 w-6" /> : <FiMenu className="h-6 w-6" />}
+                {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
               </button>
             </div>
           </div>
@@ -274,7 +277,7 @@ export default function Navbar() {
                 onChange={(e) => setSearchQuery(e.target.value)}
                 className="border border-gray-300 rounded-full pl-4 pr-10 py-2.5 text-sm w-full focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent transition-all"
               />
-              <FiSearch className="absolute right-3 top-2.5 h-4 w-4 text-gray-500" />
+              <Search className="absolute right-3 top-2.5 h-4 w-4 text-gray-500" />
 
               {results.length > 0 && (
                 <div className="absolute top-full left-0 mt-1 w-full bg-white border border-gray-200 rounded-lg shadow-lg max-h-60 overflow-y-auto z-50">
@@ -342,7 +345,7 @@ export default function Navbar() {
               }}
               className="w-full bg-amber-500 hover:bg-amber-500 text-white px-4 py-2.5 rounded-full flex items-center justify-center shadow-md transition-colors"
             >
-              <FiAlertTriangle className="w-4 h-4 mr-1" />
+              <AlertTriangle className="w-4 h-4 mr-1" />
               ভুল ত্রুটি রিপোর্ট
             </button>
           </div>

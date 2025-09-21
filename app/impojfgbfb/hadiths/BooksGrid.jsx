@@ -48,7 +48,7 @@ export default function BooksGrid({ initialBooks }) {
   }
 
   return (
-    <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-4 py-10">
       {books.map((book) => (
         <Link
           key={book.bookSlug}

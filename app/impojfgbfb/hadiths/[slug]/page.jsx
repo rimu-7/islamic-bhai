@@ -32,7 +32,7 @@ export default async function BookPage({ params }) {
       <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-8">
         {/* Left side (Chapters list, takes 2/3 space) */}
         <div className="lg:col-span-2">
-          <h2 className="text-3xl font-bold mb-6 capitalize">
+          <h2 className="text-3xl md:text-5xl font-bold mb-6 capitalize bg-gradient-to-r from-purple-500 via-teal-500 to-red-500 text-transparent bg-clip-text">
             Chapters in {bookName}
           </h2>
           <ChaptersGrid 

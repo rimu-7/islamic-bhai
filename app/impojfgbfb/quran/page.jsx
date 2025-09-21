@@ -1,9 +1,10 @@
 "use client";
-import ImportantSection from "../../../components/ImportantSection";
+import ImportantSection from "@/components/ImportantSection";
 import QuranReader from "./QuranReader";
 import { useEffect, useState } from "react";
-import { Skeleton } from "../../../components/ui/skeleton";
-import { ShowPopup } from "../../../components/ShowPopup";
+import { Skeleton } from "@/components/ui/skeleton";
+import { ShowPopup } from "@/components/ShowPopup";
+
 
 export default function FeelingsPage() {
   const [loading, setLoading] = useState(true);

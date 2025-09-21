@@ -6,7 +6,12 @@ import { Skeleton } from "../../../../../components/ui/skeleton";
 import { MoveRight, MoveLeft } from "lucide-react";
 import { useState, useEffect } from "react";
 
-export default function HadithsList({ initialHadiths, slug, chapter, bookName }) {
+export default function HadithsList({
+  initialHadiths,
+  slug,
+  chapter,
+  bookName,
+}) {
   const [hadiths, setHadiths] = useState(initialHadiths || []);
   const [loading, setLoading] = useState(!initialHadiths);
   const [error, setError] = useState(null);
@@ -19,7 +24,9 @@ export default function HadithsList({ initialHadiths, slug, chapter, bookName })
           setLoading(true);
           setError(null);
 
-          const res = await fetch(`/api/books/${slug}/chapters/${chapter}/hadiths`);
+          const res = await fetch(
+            `/api/books/${slug}/chapters/${chapter}/hadiths`
+          );
           if (!res.ok) throw new Error(`Hadiths fetch failed: ${res.status}`);
 
           const data = await res.json();
@@ -36,7 +43,7 @@ export default function HadithsList({ initialHadiths, slug, chapter, bookName })
           setLoading(false);
         }
       }
-      
+
       fetchHadiths();
     }
   }, [initialHadiths, slug, chapter]);
@@ -55,9 +62,7 @@ export default function HadithsList({ initialHadiths, slug, chapter, bookName })
             Back
           </Link>
           <h2 className="text-3xl font-bold">Hadiths in Chapter {chapter}</h2>
-          <p className="text-gray-600 capitalize mt-1">
-            From {bookName}
-          </p>
+          <p className="text-gray-600 capitalize mt-1">From {bookName}</p>
         </div>
 
         <div className="space-y-4">
@@ -89,9 +94,7 @@ export default function HadithsList({ initialHadiths, slug, chapter, bookName })
             Back
           </Link>
           <h2 className="text-3xl font-bold">Hadiths in Chapter {chapter}</h2>
-          <p className="text-gray-600 capitalize mt-1">
-            From {bookName}
-          </p>
+          <p className="text-gray-600 capitalize mt-1">From {bookName}</p>
         </div>
 
         <div className="p-6 rounded-lg bg-green-50 text-center">
@@ -124,9 +127,7 @@ export default function HadithsList({ initialHadiths, slug, chapter, bookName })
             Back
           </Link>
           <h2 className="text-3xl font-bold">Hadiths in Chapter {chapter}</h2>
-          <p className="text-gray-600 capitalize mt-1">
-            From {bookName}
-          </p>
+          <p className="text-gray-600 capitalize mt-1">From {bookName}</p>
         </div>
 
         <div className="bg-white p-6 rounded-lg shadow text-center">
@@ -157,10 +158,10 @@ export default function HadithsList({ initialHadiths, slug, chapter, bookName })
           </span>
           Back
         </Link>
-        <h2 className="text-3xl font-bold">Hadiths in Chapter {chapter}</h2>
-        <p className="text-gray-600 capitalize mt-1">
-          From {bookName}
-        </p>
+        <h2 className="text-3xl md:text-5xl font-bold bg-gradient-to-r from-purple-500 via-teal-500 to-red-500 text-transparent bg-clip-text">
+          Hadiths in Chapter {chapter}
+        </h2>
+        <p className="text-gray-600 capitalize mt-1">From {bookName}</p>
       </div>
 
       <div className="space-y-4">
@@ -208,9 +209,7 @@ export default function HadithsList({ initialHadiths, slug, chapter, bookName })
             <div className="grid grid-cols-1 md:grid-cols-2 gap-3 pt-3 border-t text-sm">
               {hadith.grade && (
                 <div>
-                  <span className="font-semibold text-gray-700">
-                    Grade:
-                  </span>{" "}
+                  <span className="font-semibold text-gray-700">Grade:</span>{" "}
                   <span className="text-gray-600">{hadith.grade}</span>
                 </div>
               )}
@@ -220,9 +219,7 @@ export default function HadithsList({ initialHadiths, slug, chapter, bookName })
                   <span className="font-semibold text-gray-700">
                     Narrated By:
                   </span>{" "}
-                  <span className="text-gray-600">
-                    {hadith.narratedBy}
-                  </span>
+                  <span className="text-gray-600">{hadith.narratedBy}</span>
                 </div>
               )}
             </div>

@@ -3,17 +3,21 @@ import { useEffect, useState, useRef } from "react";
 import axios from "axios";
 import { useParams, useRouter } from "next/navigation";
 import SurahDetails from "../SurahDetails";
-import ImportantSection from "../../../../components/ImportantSection";
+import ImportantSection from "@/components/ImportantSection";
 
 export default function SurahNumberPage() {
-  const { surahNumber } = useParams(); // Next.js hook for dynamic params
+  const params = useParams();
+  const router = useRouter();
+  const surahNumber = Array.isArray(params.surahNumber)
+    ? params.surahNumber[0]
+    : params.surahNumber;
+
   const [selectedSurah, setSelectedSurah] = useState(null);
   const [verses, setVerses] = useState([]);
   const [currentAudio, setCurrentAudio] = useState(null);
   const [fullSurahPlaying, setFullSurahPlaying] = useState(false);
   const [currentVerseIndex, setCurrentVerseIndex] = useState(null);
   const audioRef = useRef(null);
-  const router = useRouter();
 
   useEffect(() => {
     fetchSurah();
@@ -21,6 +25,8 @@ export default function SurahNumberPage() {
   }, [surahNumber]);
 
   const fetchSurah = async () => {
+    if (!surahNumber) return;
+
     try {
       const res = await axios.get(`/api/surah/${surahNumber}`);
       setSelectedSurah(res.data.surah);
@@ -58,10 +64,26 @@ export default function SurahNumberPage() {
     setCurrentVerseIndex(null);
   };
 
+  const handleNextSurah = () => {
+    if (!surahNumber) return;
+    const nextSurah = parseInt(surahNumber) + 1;
+    if (nextSurah <= 114) {
+      router.push(`/impojfgbfb/quran/${nextSurah}`);
+    }
+  };
+
+  const handlePreviousSurah = () => {
+    if (!surahNumber) return;
+    const prevSurah = parseInt(surahNumber) - 1;
+    if (prevSurah >= 1) {
+      router.push(`/impojfgbfb/quran/${prevSurah}`);
+    }
+  };
+
   return (
     <div className="min-h-screen p-4">
       <div className="min-h-screen py-8">
-        <div className="max-w-6xl mx-auto grid grid-cols-1  lg:grid-cols-3 gap-8">
+        <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-8">
           {/* Left side (Feelings grid, takes 2/3 space) */}
           <div className="lg:col-span-2">
             <SurahDetails
@@ -73,6 +95,9 @@ export default function SurahNumberPage() {
               fullSurahPlaying={fullSurahPlaying}
               currentVerseIndex={currentVerseIndex}
               onBack={() => router.push("/impojfgbfb/quran")}
+              surahNumber={surahNumber}
+              onNextSurah={handleNextSurah}
+              onPreviousSurah={handlePreviousSurah}
             />
           </div>
 

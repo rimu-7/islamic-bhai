@@ -1,15 +1,28 @@
-import { data } from "../public/data";
+import React from "react";
+import data from "@/public/ok.json";
+import { iconMap } from "@/lib/socialIcons";
 import Link from "next/link";
-import { FaFacebookF, FaTwitter, FaInstagram, FaYoutube } from "react-icons/fa";
 
 export default function Footer() {
-  const navLinks = data.navLinks;
-  const banglaHadiths = data.banglaHadiths;
+  // Add fallbacks for all data properties
+  const navLinks = Array.isArray(data?.navLinks) ? data.navLinks : [];
+  const banglaHadiths = Array.isArray(data?.banglaHadiths)
+    ? data.banglaHadiths
+    : [];
+  const socialLinks = Array.isArray(data?.socialMedia) ? data.socialMedia : [];
+
+  // Debug data
+  console.log("data:", data);
+  console.log("socialLinks:", socialLinks);
+
+  // Select random hadith with fallback
   const randomHadith =
-    banglaHadiths[Math.floor(Math.random() * banglaHadiths.length)];
+    banglaHadiths.length > 0
+      ? banglaHadiths[Math.floor(Math.random() * banglaHadiths.length)]
+      : { text: "No hadith available", reference: "N/A" };
 
   return (
-    <footer className=" py-12">
+    <footer className="py-12">
       <div className="container mx-auto px-6 md:px-12 grid grid-cols-1 md:grid-cols-4 gap-8">
         {/* Brand / About */}
         <div>
@@ -25,56 +38,49 @@ export default function Footer() {
         {/* Quick Links */}
         <div className="mb-4">
           <h3 className="text-xl font-semibold mb-4">দ্রুত লিংক</h3>
-          {navLinks.map((link, index) => (
-            <Link
-              key={index}
-              href={link.path}
-              className="flex items-centertransition-colors hover:text-green-400"
-              target={link.target}
-              rel={link.rel}
-            >
-              {link.name}
-            </Link>
-          ))}
-          <Link href={"/about"}>About</Link>
+          {navLinks.length > 0 ? (
+            navLinks.map((link, index) => (
+              <Link
+                key={link.path || index}
+                href={link.path || "/"}
+                className="block transition-colors hover:text-green-400"
+                target={link.target || "_self"}
+                rel={link.rel || ""}
+              >
+                {link.name || "Unnamed Link"}
+              </Link>
+            ))
+          ) : (
+            <p>No links available</p>
+          )}
+          <Link href="/about" className="block hover:text-green-400">
+            About
+          </Link>
         </div>
 
         {/* Social Media */}
         <div>
           <h3 className="text-xl font-semibold mb-4">আমাদের সাথে যুক্ত হোন</h3>
-          <div className="flex space-x-4">
-            <a
-              href="https://facebook.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:text-green-400 transition"
-            >
-              <FaFacebookF />
-            </a>
-            <a
-              href="https://twitter.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:text-green-400 transition"
-            >
-              <FaTwitter />
-            </a>
-            <a
-              href="https://instagram.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:text-green-400 transition"
-            >
-              <FaInstagram />
-            </a>
-            <a
-              href="https://youtube.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:text-green-400 transition"
-            >
-              <FaYoutube />
-            </a>
+          <div className="flex gap-4 flex-wrap">
+            <ul className="flex gap-4 flex-wrap">
+              {socialLinks.map((link) => {
+                const Icon = iconMap[link.name]; // Get icon component from iconMap
+                if (!Icon) return null; // Skip if no icon found
+                return (
+                  <li key={link.name}>
+                    <a
+                      href={link.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label={link.name}
+                      className={`flex items-center justify-center ${link.color} p-1 w-8 h-8 text-white rounded-lg text-xl  transform transition-all duration-300 hover:scale-120 hover:rotate-6`}
+                    >
+                      <Icon />
+                    </a>
+                  </li>
+                );
+              })}
+            </ul>
           </div>
         </div>
 
@@ -101,8 +107,7 @@ export default function Footer() {
       </div>
 
       {/* Footer Bottom */}
-
-      <div className="border-l-4 border-amber-400 pl-4 mb-8 text-left max-w-md mx-auto">
+      <div className="border-l-4 border-amber-400 pl-4 mb-8 text-left max-w-md mx-auto mt-10">
         <p>
           © {new Date().getFullYear()} ইসলামিক ইনস্পায়ার। সর্বস্বত্ব সংরক্ষিত।
         </p>

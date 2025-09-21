@@ -1,5 +1,6 @@
-import ImportantSection from "../../../components/ImportantSection";
+import ImportantSection from "@/components/ImportantSection";
 import NamesPage from "./Names";
+import SocialMedia from "@/components/SocialMedia";
 
 export default function FeelingsPage() {
   return (
@@ -8,6 +9,7 @@ export default function FeelingsPage() {
         {/* Left side (Feelings grid, takes 2/3 space) */}
         <div className="lg:col-span-2">
             <NamesPage/>
+            <SocialMedia/>
         </div>
 
         {/* Right side (ImportantSection, takes 1/3 space) */}

@@ -1,13 +1,9 @@
-// components/ChaptersGrid.jsx
-"use client";
-
 import Link from "next/link";
 import { MoveLeft } from "lucide-react";
 
 export default function ChaptersGrid({ chapters, slug, bookName }) {
-  // No state or effects needed - we just render the data passed from server
 
-  if (chapters.length === 0) {
+  if (!chapters) {
     return (
       <div className="bg-white p-6 rounded-lg shadow text-center">
         <p className="text-red-500 text-lg">No chapters found.</p>
@@ -29,7 +25,7 @@ export default function ChaptersGrid({ chapters, slug, bookName }) {
       {chapters.map((chapter) => (
         <div
           key={chapter.chapterNumber}
-          className="p-4 rounded-lg border-2 h-27 hover:bg-green-50 transition-shadow"
+          className="p-4 rounded-lg border-2 h-full hover:bg-green-50 transition-shadow"
         >
           <Link
             href={`/impojfgbfb/hadiths/${slug}/${chapter.chapterNumber}`}
@@ -37,9 +33,7 @@ export default function ChaptersGrid({ chapters, slug, bookName }) {
           >
             <h3 className="text-xl font-semibold">
               Chapter {chapter.chapterNumber}:
-              {chapter.chapterEnglish ||
-                chapter.chapterArabic ||
-                "Untitled"}
+              {chapter.chapterEnglish || chapter.chapterArabic || "Untitled"}
             </h3>
             {chapter.chapterSummary && (
               <p className="text-gray-600 mt-2 text-sm">

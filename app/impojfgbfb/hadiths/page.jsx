@@ -1,4 +1,5 @@
 // app/impojfgbfb/hadiths/page.jsx
+import SocialMedia from "@/components/SocialMedia";
 import ImportantSection from "../../../components/ImportantSection";
 import BooksGrid from "./BooksGrid";
 
@@ -37,6 +38,7 @@ export default async function BooksPage() {
         <div className="lg:col-span-2">
           <h2 className="text-3xl font-bold mb-4">হাদিসের বই সমূহ</h2>
           <BooksGrid initialBooks={books} />
+          <SocialMedia/>
         </div>
 
         {/* Right side */}

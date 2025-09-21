@@ -1,6 +1,6 @@
 "use client";
-import { Play, Pause, MoveLeft } from "lucide-react";
-import { Skeleton } from "../../../components/ui/skeleton";
+import { Skeleton } from "@/components/ui/skeleton";
+import { Play, Pause, MoveLeft, ChevronRight, ChevronLeft } from "lucide-react";
 
 export default function SurahDetails({
   selectedSurah,
@@ -11,8 +11,15 @@ export default function SurahDetails({
   fullSurahPlaying,
   currentVerseIndex,
   onBack,
+  surahNumber,
+  onNextSurah,
+  onPreviousSurah,
 }) {
   if (!selectedSurah) return null;
+
+  // Assuming 114 surahs in the Quran
+  const isFirstSurah = parseInt(surahNumber) === 1;
+  const isLastSurah = parseInt(surahNumber) === 114;
 
   return (
     <div>
@@ -60,10 +67,36 @@ export default function SurahDetails({
             )}
           </div>
         </div>
+        {/* Next and Previous Surah Navigation */}
+        <div className="flex justify-between mt-4">
+          <button
+            onClick={onPreviousSurah}
+            disabled={isFirstSurah}
+            className={`flex items-center gap-1 px-3 py-1 rounded ${
+              isFirstSurah
+                ? "bg-gray-100 text-gray-400 cursor-not-allowed"
+                : "bg-emerald-100 text-emerald-600"
+            }`}
+          >
+            <ChevronLeft /> পূর্ববর্তী সূরা
+          </button>
+          <button
+            onClick={onNextSurah}
+            disabled={isLastSurah}
+            className={`flex items-center gap-1 px-3 py-1 rounded ${
+              isLastSurah
+                ? "bg-gray-100 text-gray-400 cursor-not-allowed"
+                : "bg-emerald-100 text-emerald-600"
+            }`}
+          >
+            {}
+            পরবর্তী সূরা <ChevronRight />
+          </button>
+        </div>
       </div>
 
       {/* Verses */}
-      {verses.length === 0
+      {!verses
         ? Array.from({ length: 6 }).map((_, i) => (
             <div key={i} className="p-4 mb-3 border rounded">
               <Skeleton className="h-6 w-8 mb-2" />

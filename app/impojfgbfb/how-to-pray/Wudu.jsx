@@ -152,7 +152,7 @@ export default function WuduGuide() {
   };
 
   return (
-    <div className="max-w-3xl mx-auto p-6 bg-white rounded-2xl shadow-lg">
+    <div className="max-w-3xl mx-auto p-6 bg-white rounded-2xl">
       <header className="mb-6">
         <h1 className="text-2xl md:text-3xl font-semibold mb-2">
           ওযু (Wudu) করার সম্পূর্ণ নির্দেশিকা — বাংলা

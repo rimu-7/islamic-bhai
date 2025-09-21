@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect, lazy, Suspense } from "react";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Skeleton } from "@/components/ui/skeleton";
 
 // Lazy load components
@@ -13,6 +14,7 @@ export default function WuduNamazPage() {
   const [showModal, setShowModal] = useState(true);
   const [loading, setLoading] = useState(true);
   const [wuduCompleted, setWuduCompleted] = useState(false);
+  const [activeTab, setActiveTab] = useState("wudu"); // Default to Wudu tab
 
   useEffect(() => {
     // Simulate initial loading
@@ -23,17 +25,20 @@ export default function WuduNamazPage() {
   const handleYes = () => {
     setWuduConfirmed(true);
     setShowModal(false);
+    setActiveTab("namaz"); // Switch to Namaz tab if user selects "হ্যাঁ"
   };
 
   const handleNo = () => {
     setWuduConfirmed(false);
     setShowModal(false);
+    setActiveTab("wudu"); // Stay on Wudu tab if user selects "না"
   };
 
   // Callback to handle Wudu completion from WuduGuide
   const handleWuduComplete = () => {
     setWuduCompleted(true);
-    setWuduConfirmed(true); // Automatically switch to NamazGuide
+    setWuduConfirmed(true);
+    setActiveTab("namaz"); // Switch to Namaz tab upon Wudu completion
   };
 
   return (
@@ -70,9 +75,22 @@ export default function WuduNamazPage() {
       <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-8">
         {/* Left side (2/3 width) */}
         <div className="lg:col-span-2">
-          <Suspense fallback={<Skeleton className="h-64 w-full rounded-xl" />}>
-            {wuduConfirmed || wuduCompleted ? <NamazGuide /> : <WuduGuide onWuduComplete={handleWuduComplete} />}
-          </Suspense>
+          <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
+            <TabsList className="grid w-full grid-cols-2">
+              <TabsTrigger value="wudu">অজু গাইড</TabsTrigger>
+              <TabsTrigger value="namaz">নামাজ গাইড</TabsTrigger>
+            </TabsList>
+            <TabsContent value="wudu">
+              <Suspense fallback={<Skeleton className="h-64 w-full rounded-xl" />}>
+                <WuduGuide onWuduComplete={handleWuduComplete} />
+              </Suspense>
+            </TabsContent>
+            <TabsContent value="namaz">
+              <Suspense fallback={<Skeleton className="h-64 w-full rounded-xl" />}>
+                <NamazGuide />
+              </Suspense>
+            </TabsContent>
+          </Tabs>
         </div>
 
         {/* Right side */}

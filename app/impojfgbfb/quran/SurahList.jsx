@@ -28,7 +28,7 @@ export default function SurahList({ surahs, error, fetchSurahs, onSelect }) {
 
   return (
     <div>
-      <h2 className="text-4xl text-green-400 font-bold mb-4">
+      <h2 className="text-2xl md:text-5xl bg-gradient-to-r from-purple-500 via-teal-500 to-red-500 text-transparent bg-clip-text p-2 font-bold mb-4">
         কুরআনের সূরাসমূহ
       </h2>
       <div className="mb-4">

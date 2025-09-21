@@ -1,10 +1,10 @@
 "use client";
 import { useState, useEffect } from "react";
 import { AlertCircle } from "lucide-react";
-import { Skeleton } from "../../../../components/ui/skeleton";
-import ImportantSection from "../../../../components/ImportantSection";
+import { Skeleton } from "@/components/ui/skeleton";
+import ImportantSection from "@/components/ImportantSection";
 import FeelingNavigation from "./FeelingNav";
-import { ShowPopup } from "../../../../components/ShowPopup";
+import { ShowPopup } from "@/components/ShowPopup";
 export default function FeelingClient({ slug, feelingData, supplicationData }) {
   const [hydrated, setHydrated] = useState(false);
 
@@ -83,22 +83,14 @@ export default function FeelingClient({ slug, feelingData, supplicationData }) {
 
   return (
     <div className="min-h-screen py-8 px-4">
-      <ShowPopup/>
+      <ShowPopup />
       <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-8">
         {/* Left side */}
         <div className="lg:col-span-2">
           <div className="p-4">
-            <div
-              className={`p-4 rounded-lg text-center mb-6 ${feelingData.color}`}
-            >
-              <h1 className="text-2xl font-bold">{feelingData.title}</h1>
-            </div>
-
-            <h2
-              className={`text-3xl font-bold text-center mb-6 ${supplicationData.color}`}
-            >
-              {supplicationData.title}
-            </h2>
+            <h1 className="p-4 text-3xl md:text-5xl text-center font-bold mb-6 bg-gradient-to-r from-purple-500 via-teal-500 to-red-500 text-transparent bg-clip-text">
+              {feelingData.title}
+            </h1>
 
             <div className="space-y-8">
               {supplicationData.items.map((item, index) => (

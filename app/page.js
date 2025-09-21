@@ -1,6 +1,9 @@
-import { PremiumCarousel } from "../components/Carousel";
-import IslamicTopicsGrid from "../components/IslamicTopicsGrid";
-import Time from "../components/prayer-time/Time";
+import ConfirmationMessage from "@/components/ConfirmationMessage";
+import IslamicTopicsGrid from "@/components/IslamicGrid";
+import { PremiumCarousel } from "@/components/PremiumCarousel";
+import SocialMedia from "@/components/SocialMedia";
+import Time from "@/components/time/time";
+
 
 export default function Home() {
   return (
@@ -10,6 +13,8 @@ export default function Home() {
         <PremiumCarousel />
         <Time />
         <IslamicTopicsGrid />
+        <SocialMedia/>
+        <ConfirmationMessage/>
       </div>
     </div>
   );

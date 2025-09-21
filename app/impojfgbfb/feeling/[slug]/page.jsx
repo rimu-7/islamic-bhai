@@ -1,7 +1,7 @@
 // app/feeling/[slug]/page.js
 import fs from "fs/promises";
 import path from "path";
-import data from "../../../../data/ok.json";
+import data from "@/public/ok.json";
 import FeelingClient from "./FeelingClient";
 
 export async function generateMetadata({ params }) {
@@ -24,7 +24,7 @@ export async function generateMetadata({ params }) {
 export default async function FeelingPage({ params }) {
   const { slug } = params;
 
-  const filePath = path.join(process.cwd(), "data", "ok.json");
+  const filePath = path.join(process.cwd(), "public", "ok.json");
   const fileData = await fs.readFile(filePath, "utf-8");
   const data = JSON.parse(fileData);
 
