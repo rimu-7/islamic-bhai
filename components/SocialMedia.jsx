@@ -1,14 +1,11 @@
 // File: Likely components/SocialMedia.jsx
-import React from "react"; // React import for JSX
-import data from "@/public/ok.json"; // Importing a JSON file
-import { iconMap } from "@/lib/socialIcons"; // Importing iconMap for social media icons
+import React from "react";
+import data from "@/public/ok.json";
+import { iconMap } from "@/lib/socialIcons";
 
-// Component definition
 export default function SocialMedia() {
-  // Initialize socialLinks from data.socialMedia, with fallback to empty array
   const socialLinks = data.socialMedia || [];
 
-  // JSX rendering
   return (
     <div className="flex justify-center mx-auto px-4 sm:px-6 lg:px-8 w-full">
       <ul className="flex gap-3 sm:gap-4 flex-wrap justify-center">

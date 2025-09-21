@@ -11,10 +11,6 @@ export default function Footer() {
     : [];
   const socialLinks = Array.isArray(data?.socialMedia) ? data.socialMedia : [];
 
-  // Debug data
-  console.log("data:", data);
-  console.log("socialLinks:", socialLinks);
-
   // Select random hadith with fallback
   const randomHadith =
     banglaHadiths.length > 0

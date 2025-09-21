@@ -1,12 +1,13 @@
 import ProphetMuhammad from "./ProphetMuhammad";
-import ImportantSection from "@/components/ImportantSection"; // Assuming this is correct
-import { ShowPopup } from "@/components/ShowPopup"; // Assuming this is correct
+import ImportantSection from "@/components/ImportantSection";
+import { ShowPopup } from "@/components/ShowPopup";
 
 async function fetchWikiData(language = "bn") {
   const wikiBase = language === "bn" ? "bn.wikipedia.org" : "en.wikipedia.org";
   const pageTitle = language === "bn" ? "মুহাম্মাদ" : "Muhammad";
 
   try {
+    // Step 1: Fetch page title with redirects
     const queryResponse = await fetch(
       `https://${wikiBase}/w/api.php?` +
         new URLSearchParams({
@@ -18,10 +19,14 @@ async function fetchWikiData(language = "bn") {
         }),
       { next: { revalidate: 3600 } }
     );
+    if (!queryResponse.ok) {
+      throw new Error(`Query failed: ${queryResponse.status}`);
+    }
     const queryData = await queryResponse.json();
     const page = Object.values(queryData.query.pages)[0];
     const resolvedTitle = page.title || pageTitle;
 
+    // Step 2: Fetch only necessary sections or mobile content
     const contentResponse = await fetch(
       `https://${wikiBase}/w/api.php?` +
         new URLSearchParams({
@@ -29,11 +34,15 @@ async function fetchWikiData(language = "bn") {
           page: resolvedTitle,
           format: "json",
           prop: "text|sections",
+          mobileformat: "true", 
+          section: "0",
           origin: "*",
         }),
       { next: { revalidate: 3600 } }
     );
-
+    if (!contentResponse.ok) {
+      throw new Error(`Content fetch failed: ${contentResponse.status}`);
+    }
     const contentData = await contentResponse.json();
 
     return {
@@ -54,14 +63,13 @@ export default async function ProphetPage() {
 
   return (
     <div className="min-h-screen py-8">
-      <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-3 ">
-      <ShowPopup />
-        {/* Main Content & Sidebar */}
+      <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-8">
+        <ShowPopup />
+        {/* Main Content */}
         <div className="lg:col-span-2">
           <ProphetMuhammad initialData={initialData} />
         </div>
-
-        {/* Right side - Important Section */}
+        {/* Right Sidebar */}
         <div className="lg:col-span-1">
           <ImportantSection />
         </div>
@@ -69,3 +77,5 @@ export default async function ProphetPage() {
     </div>
   );
 }
+
+export const revalidate = 3600;
