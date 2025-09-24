@@ -1291,39 +1291,39 @@
   },
   "islamicContent": [
     {
-      "src": "https://res.cloudinary.com/dub1bqk4s/image/upload/v1757271042/5-pillars-of-islam_u00pbn.jpg",
+      "src": "https://res.cloudinary.com/dub1bqk4s/image/upload/v1758526346/image_xpyjao.png",
       "title": "The Five Pillars of Islam",
       "description": "Foundation of a Muslim's faith and practice",
       "quote": "The best of you are those who learn the Quran and teach it.",
       "path": "/impojfgbfb/pillars"
     },
     {
-      "src": "https://images.pexels.com/photos/29793227/pexels-photo-29793227.jpeg",
+      "src": "https://images.pexels.com/photos/9127064/pexels-photo-9127064.jpeg",
       "title": "The Importance of Prayer",
       "description": "Connecting with Allah five times daily",
       "quote": "Indeed, prayer prohibits immorality and wrongdoing.",
       "path": "/impojfgbfb/prayer"
     },
     {
-      "src": "https://images.pexels.com/photos/2233399/pexels-photo-2233399.jpeg",
+      "src": "https://images.pexels.com/photos/1652303/pexels-photo-1652303.jpeg",
       "title": "The Month of Ramadan",
       "description": "A time of fasting and spiritual reflection",
       "quote": "When Ramadan begins, the gates of Paradise are opened.",
-      "path": "/impojfgbfb/ramadan"
+      "path": "/impojfgbfb/ramadan/dua"
     },
     {
-      "src": "https://images.pexels.com/photos/36704/pexels-photo.jpg",
+      "src": "https://images.pexels.com/photos/16689050/pexels-photo-16689050.jpeg",
       "title": "The Holy Quran",
       "description": "Divine guidance for humanity",
       "quote": "So remember Me; I will remember you.",
       "path": "/impojfgbfb/quran"
     },
     {
-      "src": "https://images.pexels.com/photos/4346403/pexels-photo-4346403.jpeg",
+      "src": "https://images.pexels.com/photos/18996760/pexels-photo-18996760.jpeg",
       "title": "The Journey of Hajj",
       "description": "Pilgrimage to the holy city of Makkah",
       "quote": "And proclaim to the people the Hajj; they will come to you on foot and on every lean camel.",
-      "path": "/impojfgbfb/hajj"
+      "path": "/impojfgbfb/pillars/hajj"
     }
   ],
 
@@ -1367,7 +1367,7 @@
     { "name": "দুয়া ও যিকির ", "path": "/impojfgbfb/dua-and-dhikr" },
     { "name": "কুরআন ", "path": "/impojfgbfb/quran" },
     { "name": "আমি অনুভব করছি", "path": "/impojfgbfb/feeling" },
-    { "name": "নবীদের গল্প", "path": "/impojfgbfb/the-sotories-of-prophets" },
+    { "name": "নবীদের গল্প", "path": "/impojfgbfb/prophets-story" },
     { "name": "সাহায্য করুন", "path": "/donation" }
   ],
 
@@ -2233,8 +2233,250 @@
     },
     {
       "name": "Pinterest",
-      "href": "https://pinterest.com",
+      "href": "https://pin.it/3DK19HXKy",
       "color": "bg-red-500 hover:shadow-red-400/60"
+    }
+  ],
+  "hadiths": [
+    {
+      "id": "1",
+      "arabic": "مَنْ سَلَكَ طَرِيقًا يَطْلُبُ فِيهِ عِلْمًا سَلَكَ اللَّهُ بِهِ طَرِيقًا مِنْ طُرُقِ الْجَنَّةِ",
+      "bangla": "যে ব্যক্তি জ্ঞান অর্জনের জন্য কোনো পথে বের হয়, আল্লাহ তার জন্য জান্নাতের পথকে সহজ করে দেন।",
+      "english": "Whoever follows a path in pursuit of knowledge, Allah will facilitate for him a path to Paradise.",
+      "reference": "Sahih Muslim 2699, Sunan Abu Dawud 3641, Jami` at-Tirmidhi 2646",
+      "grade": "Sahih"
+    },
+    {
+      "id": "2",
+      "arabic": "إِنَّمَا الأَعْمَالُ بِالنِّيَّاتِ، وَإِنَّمَا لِكُلِّ امْرِئٍ مَا نَوَى",
+      "bangla": "নিশ্চয়ই আমল নির্ভর করে নিয়তের উপর, এবং প্রত্যেক ব্যক্তি যা নিয়ত করে তাই পায়।",
+      "english": "Indeed, actions are judged by intentions, and every person will get what they intended.",
+      "reference": "Sahih al-Bukhari 1, Sahih Muslim 1907",
+      "grade": "Sahih"
+    },
+    {
+      "id": "3",
+      "arabic": "مَنْ صَلَّى الْبَرْدَيْنِ دَخَلَ الْجَنَّةَ",
+      "bangla": "যে ব্যক্তি দুই ঠাণ্ডা সময়ের নামায (ফজর ও আসর) পড়ে, সে জান্নাতে প্রবেশ করবে।",
+      "english": "Whoever prays the two cool prayers (Fajr and Asr) will enter Paradise.",
+      "reference": "Sahih al-Bukhari 574, Sahih Muslim 635",
+      "grade": "Sahih"
+    },
+    {
+      "id": "4",
+      "arabic": "الْمُسْلِمُ مَنْ سَلِمَ الْمُسْلِمُونَ مِنْ لِسَانِهِ وَيَدِهِ",
+      "bangla": "মুসলিম সেই ব্যক্তি, যার জিহ্বা ও হাত থেকে অন্য মুসলিম নিরাপদ থাকে।",
+      "english": "A Muslim is the one from whose tongue and hands other Muslims are safe.",
+      "reference": "Sahih al-Bukhari 10, Sahih Muslim 41",
+      "grade": "Sahih"
+    },
+    {
+      "id": "4",
+      "arabic": "لَا يُؤْمِنُ أَحَدُكُمْ حَتَّى يُحِبَّ لِأَخِيهِ مَا يُحِبُّ لِنَفْسِهِ",
+      "bangla": "তোমাদের কেউ পূর্ণ ঈমানদার হবে না, যতক্ষণ না সে তার ভাইয়ের জন্য তাই কামনা করে, যা সে নিজের জন্য কামনা করে।",
+      "english": "None of you truly believes until he loves for his brother what he loves for himself.",
+      "reference": "Sahih al-Bukhari 13, Sahih Muslim 45",
+      "grade": "Sahih"
+    },
+    {
+      "id": "5",
+      "arabic": "خَيْرُكُمْ مَنْ تَعَلَّمَ الْقُرْآنَ وَعَلَّمَهُ",
+      "bangla": "তোমাদের মধ্যে সেই সর্বোত্তম, যে কুরআন শিখে এবং তা শিক্ষা দেয়।",
+      "english": "The best of you are those who learn the Quran and teach it.",
+      "reference": "Sahih al-Bukhari 5027",
+      "grade": "Sahih"
+    },
+    {
+      "id": "6",
+      "arabic": "مَنْ كَانَ يُؤْمِنُ بِاللَّهِ وَالْيَوْمِ الْآخِرِ فَلْيَقُلْ خَيْرًا أَوْ لِيَصْمُتْ",
+      "bangla": "যে ব্যক্তি আল্লাহ ও আখিরাতের প্রতি ঈমান রাখে, সে যেন ভালো কথা বলে অথবা চুপ থাকে।",
+      "english": "Whoever believes in Allah and the Last Day should speak good or remain silent.",
+      "reference": "Sahih al-Bukhari 6018, Sahih Muslim 47",
+      "grade": "Sahih"
+    },
+    {
+      "id": "7",
+      "arabic": "الطُّهُورُ شَطْرُ الْإِيمَانِ",
+      "bangla": "পবিত্রতা ঈমানের অর্ধেক।",
+      "english": "Purity is half of faith.",
+      "reference": "Sahih Muslim 223",
+      "grade": "Sahih"
+    },
+    {
+      "id": "8",
+      "arabic": "لَا تَحَاسَدُوا وَلَا تَنَاجَشُوا وَلَا تَبَاغَضُوا وَكُونُوا عِبَادَ اللَّهِ إِخْوَانًا",
+      "bangla": "তোমরা পরস্পরের প্রতি হিংসা করো না, ষড়যন্ত্র করো না, বিদ্বেষ পোষণ করো না, বরং আল্লাহর বান্দা হিসেবে ভাইয়ের মতো থাকো।",
+      "english": "Do not envy one another, do not deceive one another, do not hate one another, and be brothers as Allah’s servants.",
+      "reference": "Sahih al-Bukhari 6064, Sahih Muslim 2564",
+      "grade": "Sahih"
+    },
+    {
+      "id": "9",
+      "arabic": "مَنْ صَامَ رَمَضَانَ إِيمَانًا وَاحْتِسَابًا غُفِرَ لَهُ مَا تَقَدَّمَ مِنْ ذَنْبِهِ",
+      "bangla": "যে ব্যক্তি ঈমানের সাথে এবং সওয়াবের আশায় রমজানের রোজা পালন করে, তার পূর্ববর্তী গুনাহ মাফ করে দেওয়া হয়।",
+      "english": "Whoever fasts Ramadan with faith and seeking reward, his past sins will be forgiven.",
+      "reference": "Sahih al-Bukhari 38, Sahih Muslim 760",
+      "grade": "Sahih"
+    },
+    {
+      "id": "10",
+      "arabic": "الدُّنْيَا سِجْنُ الْمُؤْمِنِ وَجَنَّةُ الْكَافِرِ",
+      "bangla": "দুনিয়া মুমিনের জন্য কারাগার এবং কাফেরের জন্য জান্নাত।",
+      "english": "The world is a prison for the believer and a paradise for the disbeliever.",
+      "reference": "Sahih Muslim 2956",
+      "grade": "Sahih"
+    },
+    {
+      "id": "11",
+      "arabic": "إِنَّ اللَّهَ لَا يَنْظُرُ إِلَى صُوَرِكُمْ وَلَا إِلَى أَجْسَادِكُمْ وَلَكِنْ يَنْظُرُ إِلَى قُلُوبِكُمْ وَأَعْمَالِكُمْ",
+      "bangla": "নিশ্চয়ই আল্লাহ তোমাদের চেহারা ও দেহের দিকে তাকান না; বরং তিনি তোমাদের অন্তর ও কর্মের দিকে তাকান।",
+      "english": "Indeed, Allah does not look at your appearance or wealth, but He looks at your hearts and your deeds.",
+      "reference": "Sahih Muslim 2564",
+      "grade": "Sahih"
+    },
+    {
+      "id": "12",
+      "arabic": "مَنْ لا يَرْحَمُ لا يُرْحَمُ",
+      "bangla": "যে দয়া করে না, তার প্রতি দয়া করা হবে না।",
+      "english": "He who does not show mercy will not be shown mercy.",
+      "reference": "Sahih al-Bukhari 6013, Sahih Muslim 2319",
+      "grade": "Sahih"
+    },
+    {
+      "id": "13",
+      "arabic": "مَنْ غَشَّ فَلَيْسَ مِنَّا",
+      "bangla": "যে প্রতারণা করে, সে আমাদের দলভুক্ত নয়।",
+      "english": "Whoever cheats is not one of us.",
+      "reference": "Sahih Muslim 102",
+      "grade": "Sahih"
+    },
+    {
+      "id": "14",
+      "arabic": "الْمَرْءُ مَعَ مَنْ أَحَبَّ",
+      "bangla": "মানুষ তার প্রিয়জনের সঙ্গে (আখিরাতে) থাকবে।",
+      "english": "A person will be with those whom he loves.",
+      "reference": "Sahih al-Bukhari 6169, Sahih Muslim 2640",
+      "grade": "Sahih"
+    },
+    {
+      "id": "15",
+      "arabic": "إِنَّ الصِّدْقَ يَهْدِي إِلَى الْبِرِّ وَإِنَّ الْبِرَّ يَهْدِي إِلَى الْجَنَّةِ",
+      "bangla": "নিশ্চয়ই সত্যপরায়ণতা নেকির দিকে পরিচালিত করে, আর নেকি জান্নাতের দিকে পরিচালিত করে।",
+      "english": "Indeed, truthfulness leads to righteousness, and righteousness leads to Paradise.",
+      "reference": "Sahih al-Bukhari 6094, Sahih Muslim 2607",
+      "grade": "Sahih"
+    },
+    {
+      "id": "16",
+      "arabic": "إِنَّ أَحَبَّ الْأَعْمَالِ إِلَى اللَّهِ أَدْوَمُهَا وَإِنْ قَلَّ",
+      "bangla": "আল্লাহর নিকট সবচেয়ে প্রিয় আমল হলো, যা নিয়মিত করা হয় যদিও তা অল্প হয়।",
+      "english": "The most beloved deeds to Allah are those done consistently, even if small.",
+      "reference": "Sahih al-Bukhari 6465, Sahih Muslim 783",
+      "grade": "Sahih"
+    },
+    {
+      "id": "17",
+      "arabic": "لَا تَغْضَبْ",
+      "bangla": "রাগ করো না।",
+      "english": "Do not become angry.",
+      "reference": "Sahih al-Bukhari 6116",
+      "grade": "Sahih"
+    },
+    {
+      "id": "18",
+      "arabic": "الدُّعَاءُ هُوَ الْعِبَادَةُ",
+      "bangla": "দোয়াই হচ্ছে ইবাদত।",
+      "english": "Supplication is worship.",
+      "reference": "Sunan Abu Dawud 1479, Jami` at-Tirmidhi 2969 (Authenticated by al-Albani)",
+      "grade": "Sahih"
+    },
+    {
+      "id": "19",
+      "arabic": "الْمَيِّتُ يُعَذَّبُ فِي قَبْرِهِ بِمَا نِيحَ عَلَيْهِ",
+      "bangla": "মৃত ব্যক্তি কবরের মধ্যে তার উপর বিলাপ করার কারণে শাস্তি ভোগ করে।",
+      "english": "The deceased is punished in his grave for the wailing done over him.",
+      "reference": "Sahih al-Bukhari 1292, Sahih Muslim 927",
+      "grade": "Sahih"
+    },
+    {
+      "id": "20",
+      "arabic": "الْمُؤْمِنُ الْقَوِيُّ خَيْرٌ وَأَحَبُّ إِلَى اللَّهِ مِنَ الْمُؤْمِنِ الضَّعِيفِ وَفِي كُلٍّ خَيْرٌ",
+      "bangla": "শক্তিশালী মুমিন দুর্বল মুমিনের চেয়ে উত্তম ও আল্লাহর কাছে অধিক প্রিয়; তবে উভয়ের মধ্যেই কল্যাণ রয়েছে।",
+      "english": "The strong believer is better and more beloved to Allah than the weak believer, though there is good in both.",
+      "reference": "Sahih Muslim 2664",
+      "grade": "Sahih"
+    },
+    {
+      "id": "21",
+      "arabic": "مَنْ كَانَ فِي حَاجَةِ أَخِيهِ كَانَ اللَّهُ فِي حَاجَتِهِ",
+      "bangla": "যে ব্যক্তি তার ভাইয়ের প্রয়োজন মেটায়, আল্লাহ তার প্রয়োজন মেটান।",
+      "english": "Whoever fulfills the needs of his brother, Allah will fulfill his needs.",
+      "reference": "Sahih al-Bukhari 2442, Sahih Muslim 2580",
+      "grade": "Sahih"
+    },
+    {
+      "id": "22",
+      "arabic": "تَبَسُّمُكَ فِي وَجْهِ أَخِيكَ لَكَ صَدَقَةٌ",
+      "bangla": "তুমি তোমার ভাইয়ের মুখে হাসিমুখে তাকানো তোমার জন্য সদকা।",
+      "english": "Your smiling in the face of your brother is charity for you.",
+      "reference": "Jami` at-Tirmidhi 1956 (Authenticated by al-Albani)",
+      "grade": "Hasan Sahih"
+    },
+    {
+      "id": "23",
+      "arabic": "مَنْ سَتَرَ مُسْلِمًا سَتَرَهُ اللَّهُ فِي الدُّنْيَا وَالْآخِرَةِ",
+      "bangla": "যে কোনো মুসলিমের দোষ ঢেকে রাখে, আল্লাহ দুনিয়া ও আখিরাতে তার দোষ ঢেকে রাখবেন।",
+      "english": "Whoever conceals the faults of a Muslim, Allah will conceal his faults in this world and the Hereafter.",
+      "reference": "Sahih Muslim 2699",
+      "grade": "Sahih"
+    },
+    {
+      "id": "24",
+      "arabic": "الْجَنَّةُ تَحْتَ أَقْدَامِ الْأُمَّهَاتِ",
+      "bangla": "জান্নাত মায়ের পায়ের নিচে।",
+      "english": "Paradise lies beneath the feet of mothers.",
+      "reference": "Sunan an-Nasa’i 3104, Musnad Ahmad 1669 (Authenticated by al-Albani)",
+      "grade": "Hasan"
+    },
+    {
+      "id": "25",
+      "arabic": "مَنْ أَحَبَّ أَنْ يُبْسَطَ لَهُ فِي رِزْقِهِ وَيُنْسَأَ لَهُ فِي أَثَرِهِ فَلْيَصِلْ رَحِمَهُ",
+      "bangla": "যে ব্যক্তি তার রিজিক বাড়াতে ও আয়ু দীর্ঘ করতে চায়, সে যেন আত্মীয়তার সম্পর্ক রক্ষা করে।",
+      "english": "Whoever wishes to have his provision expanded and his life extended, let him uphold ties of kinship.",
+      "reference": "Sahih al-Bukhari 5986, Sahih Muslim 2557",
+      "grade": "Sahih"
+    },
+    {
+      "id": "26",
+      "arabic": "لَا يَدْخُلُ الْجَنَّةَ مَنْ كَانَ فِي قَلْبِهِ مِثْقَالُ ذَرَّةٍ مِنْ كِبْرٍ",
+      "bangla": "যার অন্তরে পরমাণু পরিমাণ অহংকার আছে, সে জান্নাতে প্রবেশ করতে পারবে না।",
+      "english": "He who has in his heart an atom’s weight of arrogance will not enter Paradise.",
+      "reference": "Sahih Muslim 91",
+      "grade": "Sahih"
+    },
+    {
+      "id": "28",
+      "arabic": "الْكَيِّسُ مَنْ دَانَ نَفْسَهُ، وَعَمِلَ لِمَا بَعْدَ الْمَوْتِ",
+      "bangla": "বুদ্ধিমান সেই ব্যক্তি, যে নিজের নফসকে নিয়ন্ত্রণ করে এবং মৃত্যুর পরের জন্য কাজ করে।",
+      "english": "The intelligent one is he who controls himself and works for what comes after death.",
+      "reference": "Jami` at-Tirmidhi 2459 (Authenticated by al-Albani)",
+      "grade": "Hasan"
+    },
+    {
+      "id": "29",
+      "arabic": "لَا تَحْقِرَنَّ مِنَ الْمَعْرُوفِ شَيْئًا وَلَوْ أَنْ تَلْقَى أَخَاكَ بِوَجْهٍ طَلْقٍ",
+      "bangla": "কোনো সৎকর্মকে তুচ্ছ জ্ঞান করো না, যদিও সেটা তোমার ভাইকে হাসিমুখে সাক্ষাৎ করা হয়।",
+      "english": "Do not belittle any good deed, even meeting your brother with a cheerful face.",
+      "reference": "Sahih Muslim 2626",
+      "grade": "Sahih"
+    },
+    {
+      "id": "30",
+      "arabic": "اَلْعُمْرُ أَطْوَلُ مِنْ أَنْ يَقْضِيَهُ الْإِنْسَانُ فِي طَلَبِ الدُّنْيَا",
+      "bangla": "জীবন এত দীর্ঘ নয় যে, মানুষ তা দুনিয়ার পেছনে ব্যয় করবে।",
+      "english": "Life is not long enough for a person to spend it seeking the worldly life.",
+      "reference": "Not a Hadith",
+      "grade": "Not a Hadith"
     }
   ]
 }

@@ -114,16 +114,17 @@ export default function Navbar() {
   }, [isMenuOpen]);
 
   // Handle search result click
-  const handleResultClick = (item) => {
-    if (item.type === "names") {
-      // Show modal for names
-      setSelectedName(item);
-    } else {
-      // Regular navigation for other types
+ const handleResultClick = (item) => {
+  if (item.type === "names") {
+    setSelectedName(item);
+  } else {
+    requestAnimationFrame(() => {
       setResults([]);
       setSearchQuery("");
-    }
-  };
+    });
+  }
+};
+
 
   // -----------------------------
   // Navbar style classes

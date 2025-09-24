@@ -44,9 +44,9 @@ export default function ZikrCategoriesPage() {
           {/* Left side (Categories grid, 2/3 space) */}
           <div className="lg:col-span-2">
             <div className="min-h-screen py-8">
-              <h1 className="bg-gradient-to-l from-emerald-600 to-green-400 text-transparent bg-clip-text p-4 text-5xl font-bold text-center mb-8">
+              <h2 className="text-3xl md:text-5xl text-center bg-gradient-to-r from-purple-500 via-teal-500 to-red-500 text-transparent bg-clip-text p-2 font-bold mb-4">
                 যিকির শ্রেণীসমূহ
-              </h1>
+              </h2>
 
               <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
                 {categories.map((category, index) => (

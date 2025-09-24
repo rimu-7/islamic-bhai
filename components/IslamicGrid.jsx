@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import data from "@/public/ok.json";
+import ShortHadiths from "./ShortHadiths";
 
 const IslamicTopicsGrid = () => {
   const topics = data.topics;
@@ -8,9 +9,9 @@ const IslamicTopicsGrid = () => {
     <div className="min-h-screen py-12 ">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-12">
-          <h1 className="text-4xl font-bold text-gray-900 font-playfair mb-4">
-            ইসলামিক লার্নিং হাব
-          </h1>
+          <h2 className="text-2xl md:text-5xl bg-gradient-to-r from-purple-500 via-teal-500 to-red-500 text-transparent bg-clip-text p-2 font-bold mb-4">
+          ইসলামিক লার্নিং হাব
+        </h2>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
             আপনার ঈমান এবং বোধগম্যতাকে শক্তিশালী করার জন্য খাঁটি ইসলামিক জ্ঞান
             এবং সম্পদ অন্বেষণ করুন।
@@ -47,10 +48,7 @@ const IslamicTopicsGrid = () => {
         </div>
 
         <div className="text-center mt-12">
-          <p className="text-gray-500 italic underline">
-            "যে ব্যক্তি জ্ঞান অর্জনের জন্য কোনো পথে বের হয়, আল্লাহ তার জন্য
-            জান্নাতের পথকে সহজ করে দেন।" - (সহীহ মুসলিম, হাদিস ২৬৯৯)
-          </p>
+          <ShortHadiths/>
         </div>
       </div>
     </div>

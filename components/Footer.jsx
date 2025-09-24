@@ -52,6 +52,9 @@ export default function Footer() {
           <Link href="/about" className="block hover:text-green-400">
             About
           </Link>
+          <Link href="/impojfgbfb/islamic-qoutes" className="block hover:text-green-400">
+            Islamic Qoutes
+          </Link>
         </div>
 
         {/* Social Media */}

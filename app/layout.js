@@ -1,9 +1,8 @@
+import Footer from "@/components/Footer";
 import "./globals.css";
 import { Hind_Siliguri } from "next/font/google";
 import { Amiri } from "next/font/google";
 import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
-import { Toaster } from "@/components/ui/sonner";
 
 const hindSiliguri = Hind_Siliguri({
   subsets: ["bengali"],
@@ -20,9 +19,9 @@ const amiri = Amiri({
 });
 
 export const metadata = {
-  title: "ইসলামিক ভাই",
+  title: "Islamic Bhai",
   description:
-    "ইসলামিক ভাইয়ে আপনাকে, ইসলামিক সব কিছুর জন্য আপনার ওয়ান স্টপ গন্তব্য। নামাজের সময় থেকে আধ্যাত্মিক দিকনির্দেশনা পর্যন্ত, ইসলামিক ভাই সব কিছুর জন্য আপনার বিশ্বস্ত উৎস।",
+    "Welcome to Islamic Bhai, your one-stop destination for all things Islamic. From prayer times to spiritual guidance, Islamic Bhai is your trusted source for all things Islamic.",
   icons: {
     icon: "/favicon.ico",
   },
@@ -31,10 +30,9 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="bn" className={`${hindSiliguri.variable} ${amiri.variable}`}>
-      <body className="font-sans antialiased bg-white text-black">
-        {/* <a href="#main" className="sr-only focus:not-sr-only">Skip to content</a> */}
+      <body className="font-sans antialiased bg-white text-gray-900">
+        <a href="#main" className="sr-only focus:not-sr-only">Skip to content</a>
         <Navbar />
-        <Toaster />
         <main id="main" className="max-w-6xl mx-auto px-4">
           {children}
         </main>

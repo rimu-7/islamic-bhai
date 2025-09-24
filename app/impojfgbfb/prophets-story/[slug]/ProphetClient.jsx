@@ -1,24 +1,18 @@
-// app/impojfgbfb/dua-and-yikir/zikr/[slug]/ZikrClient.jsx
 "use client";
 
 import { useState, useRef, useEffect } from "react";
 import { ChevronDown, ChevronUp, BookOpen, MoveUp } from "lucide-react";
-import { scroller } from "react-scroll";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
 
-export default function ZikrClient({ zikrData }) {
+export default function ProphetClient({ prophetData }) {
   const [openTOC, setOpenTOC] = useState(false);
   const [showScrollButton, setShowScrollButton] = useState(false);
+
   const tocRef = useRef(null);
   const [maxHeight, setMaxHeight] = useState("0px");
-  const [headerHeight, setHeaderHeight] = useState(0);
 
-  // measure sticky header height
-  useEffect(() => {
-    const header = document.querySelector(".sticky.top-20");
-    if (header) setHeaderHeight(header.offsetHeight + 40); // safe margin
-  }, []);
+  const defaultHeaderHeight = 150;
+  const collapseTransitionMs = 500;
 
   useEffect(() => {
     if (openTOC && tocRef.current) {
@@ -30,22 +24,42 @@ export default function ZikrClient({ zikrData }) {
 
   useEffect(() => {
     const handleScroll = () => setShowScrollButton(window.scrollY > 200);
-    window.addEventListener("scroll", handleScroll);
+    window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const scrollToTop = () => window.scrollTo({ top: 0, behavior: "smooth" });
+  const scrollToSection = (id) => {
+    const doScroll = () => {
+      const el = document.getElementById(id);
+      if (!el) return;
 
-  const handleScrollLink = (id) => {
-    setOpenTOC(false);
-    setTimeout(() => {
-      scroller.scrollTo(id, {
-        smooth: true,
-        duration: 500,
-        offset: -headerHeight,
-      });
-    }, 300);
+      const elTop = el.getBoundingClientRect().top + window.scrollY;
+
+      const style = window.getComputedStyle(el);
+      const scrollMarginTop = parseFloat(style.scrollMarginTop) || 0;
+
+      const headerEl = document.querySelector(
+        "header, .site-header, .fixed-header"
+      );
+      const headerH = headerEl
+        ? headerEl.getBoundingClientRect().height
+        : defaultHeaderHeight;
+
+      const offset = scrollMarginTop > 0 ? scrollMarginTop : headerH;
+
+      const targetY = Math.max(0, Math.round(elTop - offset));
+      window.scrollTo({ top: targetY, behavior: "smooth" });
+    };
+
+    if (openTOC) {
+      setOpenTOC(false);
+      setTimeout(doScroll, collapseTransitionMs + 20);
+    } else {
+      doScroll();
+    }
   };
+
+  const scrollToTop = () => window.scrollTo({ top: 0, behavior: "smooth" });
 
   return (
     <div>
@@ -70,26 +84,15 @@ export default function ZikrClient({ zikrData }) {
             style={{ maxHeight }}
           >
             <ul className="pb-4 space-y-2 text-sm">
-              {zikrData.sections.map((section) => (
+              {prophetData.sections.map((section) => (
                 <li key={section.id}>
-                  <span
-                    onClick={() => handleScrollLink(section.id)}
+                  <button
+                    onClick={() => scrollToSection(section.id)}
                     className="block text-left font-medium text-blue-700 hover:text-blue-900 cursor-pointer p-1"
+                    aria-label={`Go to ${section.title}`}
                   >
                     {section.title}
-                  </span>
-                  <ul className="ml-4 mt-1 space-y-1">
-                    {section.items.map((item) => (
-                      <li key={item.id}>
-                        <span
-                          onClick={() => handleScrollLink(item.id)}
-                          className="block text-gray-600 hover:text-gray-900 text-xs cursor-pointer p-1 pl-2"
-                        >
-                          - {item.name}
-                        </span>
-                      </li>
-                    ))}
-                  </ul>
+                  </button>
                 </li>
               ))}
             </ul>
@@ -100,45 +103,16 @@ export default function ZikrClient({ zikrData }) {
       {/* Main content */}
       <div className="container mx-auto py-6 space-y-8">
         <h1 className="text-3xl md:text-5xl py-2 font-bold bg-gradient-to-r from-purple-500 via-teal-500 to-red-500 text-transparent bg-clip-text">
-          {zikrData.title}
+          {prophetData.title}
         </h1>
 
-        {zikrData.sections.map((section) => (
-          <div key={section.id} className="space-y-6">
-            <h2
-              id={section.id} // ✅ unique ID only for section title
-              className="text-2xl font-semibold text-gray-800 border-b-2 border-gray-200 pb-2 scroll-mt-40"
-            >
+        {prophetData.sections.map((section) => (
+          <div key={section.id} id={section.id} className="space-y-6">
+            <h2 className="text-2xl font-semibold text-gray-800 border-b-2 border-gray-200 pb-2">
               {section.title}
             </h2>
 
-            {section.items.map((item) => (
-              <Card key={item.id} className="p-4 transition-shadow duration-300">
-                <CardContent className="space-y-4">
-                  <h3
-                    id={item.id} // ✅ unique ID only for item title
-                    className="text-lg font-bold text-green-400 scroll-mt-40"
-                  >
-                    {item.name}{" "}
-                    <span className="text-red-600 text-2xl">{item.reps}</span>
-                  </h3>
-                  <p className="text-right text-2xl font-bold leading-loose font-arabic text-gray-900">
-                    {item.arabic}
-                  </p>
-                  <p className="text-rose-700 text-lg bg-green-50 p-2 rounded-md italic">
-                    {item.pronunciation}
-                  </p>
-                  <p className="text-gray-700 text-lg italic">
-                    {item.translation}
-                  </p>
-                  {item.note && (
-                    <p className="text-lg text-gray-500 bg-gray-100 p-2 rounded-md">
-                      📌 {item.note}
-                    </p>
-                  )}
-                </CardContent>
-              </Card>
-            ))}
+            {section.description}
 
             {(section.info1 || section.info2 || section.info3) && (
               <div className="flex flex-col gap-3">
@@ -163,7 +137,6 @@ export default function ZikrClient({ zikrData }) {
         ))}
       </div>
 
-      {/* Scroll to Top */}
       {showScrollButton && (
         <button
           onClick={scrollToTop}

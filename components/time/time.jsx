@@ -292,11 +292,11 @@ const Time = () => {
 
   return (
     <div className="flex flex-col items-center justify-center ">
-      <div className="w-full max-w-2xl">
+      <div className="w-full max-w-2xl mx-auto">
+        <h2 className="text-3xl md:text-5xl text-center bg-gradient-to-r from-purple-500 via-teal-500 to-red-500 text-transparent bg-clip-text p-2 font-bold mb-4">
+          নামাজের সময় সূচি
+        </h2>
         <div className="flex flex-col items-center mb-6">
-          <h1 className="text-3xl sm:text-4xl font-extrabold text-gray-800 text-center mb-2">
-            Salah Times
-          </h1>
           {loading ? (
             <Skeleton className="h-5 w-32 mt-2" />
           ) : (
@@ -443,7 +443,6 @@ const Time = () => {
                     <span className="font-bold">
                       {nextPrayer.name} at {nextPrayer.time}
                     </span>
-                    hjhfbh
                   </p>
                 )}
               </div>

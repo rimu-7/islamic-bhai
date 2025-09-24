@@ -1,11 +1,10 @@
-// app/feeling/[slug]/page.js
 import fs from "fs/promises";
 import path from "path";
 import data from "@/public/ok.json";
 import FeelingClient from "./FeelingClient";
 
 export async function generateMetadata({ params }) {
-  const { slug } = params;
+  const { slug } = await params;
   const feeling = data.feeling.find((f) => f.path === `/feeling/${slug}`);
 
   if (!feeling) {
@@ -22,7 +21,7 @@ export async function generateMetadata({ params }) {
 }
 
 export default async function FeelingPage({ params }) {
-  const { slug } = params;
+  const { slug } = await params;
 
   const filePath = path.join(process.cwd(), "public", "ok.json");
   const fileData = await fs.readFile(filePath, "utf-8");
