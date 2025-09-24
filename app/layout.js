@@ -3,6 +3,7 @@ import "./globals.css";
 import { Hind_Siliguri } from "next/font/google";
 import { Amiri } from "next/font/google";
 import Navbar from "@/components/Navbar";
+import { Toaster } from "sonner";
 
 const hindSiliguri = Hind_Siliguri({
   subsets: ["bengali"],
@@ -19,7 +20,7 @@ const amiri = Amiri({
 });
 
 export const metadata = {
-  title: "Islamic Bhai",
+  title: "ইসলামিক ভাই",
   description:
     "Welcome to Islamic Bhai, your one-stop destination for all things Islamic. From prayer times to spiritual guidance, Islamic Bhai is your trusted source for all things Islamic.",
   icons: {
@@ -31,8 +32,11 @@ export default function RootLayout({ children }) {
   return (
     <html lang="bn" className={`${hindSiliguri.variable} ${amiri.variable}`}>
       <body className="font-sans antialiased bg-white text-gray-900">
-        <a href="#main" className="sr-only focus:not-sr-only">Skip to content</a>
+        <a href="#main" className="sr-only focus:not-sr-only">
+          Skip to content
+        </a>
         <Navbar />
+        <Toaster position="top-center" expand={true} richColors />
         <main id="main" className="max-w-6xl mx-auto px-4">
           {children}
         </main>

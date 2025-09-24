@@ -1,4 +1,3 @@
-import { Toaster } from "sonner";
 
 export const metadata = {
   title: "যাকাত ইসলামের ৩য় স্তম্ভ - ইসলামিক ভাই",
@@ -10,7 +9,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className="">{children}</body>
-      <Toaster position="top-center" expand={true} richColors />
+      
     </html>
   );
 }
