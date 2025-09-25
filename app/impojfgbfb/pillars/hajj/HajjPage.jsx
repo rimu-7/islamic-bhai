@@ -373,9 +373,9 @@ const HajjPage = () => {
               ইসলামে হজ্জের গুরুত্ব
             </h1>
             <p className="text-xl md:text-2xl  max-w-4xl mx-auto leading-relaxed  backdrop-blur-sm rounded-2xl p-6 ">
-              হজ্জ হলো ইসলামের পাঁচটি স্তম্ভের মধ্যে পঞ্চম স্তম্ভ। এটি শুধু একটি
-              ইবাদতই নয়, বরং একটি comprehensive spiritual journey যা মুমিনের
-              জীবনে গভীর transformation আনে।
+              হজ ইসলামের পাঁচটি স্তম্ভের পঞ্চম। এটি কেবল একটি ইবাদত নয়, বরং
+              একটি ব্যাপক আধ্যাত্মিক যাত্রা যা একজন বিশ্বাসীর জীবনে গভীর
+              রূপান্তর আনে।
             </p>
           </div>
         </div>

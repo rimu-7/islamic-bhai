@@ -1,12 +1,12 @@
 import ImportantSection from "@/components/ImportantSection";
-import { ShowPopup } from "@/components/ShowPopup";
+// import { ShowPopup } from "@/components/ShowPopup";
 import SocialMedia from "@/components/SocialMedia";
 import ImportanceOfPrayer from "./ImportanceOfPrayer";
 
 export default function FeelingsPage() {
   return (
     <div className="min-h-screen">
-      <ShowPopup/>
+      {/* <ShowPopup/> */}
       <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-3 ">
         {/* Left side (Feelings grid, takes 2/3 space) */}
         <div className="lg:col-span-2">

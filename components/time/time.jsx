@@ -265,7 +265,7 @@ const Time = () => {
     if (prayerKey === "Fajr") return times.Sunrise;
     if (prayerKey === "Isha") {
       const nextFajr = new Date();
-      nextFajr.setHours(23, 59, 59);
+      nextFajr.setHours(4, 0, 0);
       return `${nextFajr.getHours()}:${String(nextFajr.getMinutes()).padStart(
         2,
         "0"

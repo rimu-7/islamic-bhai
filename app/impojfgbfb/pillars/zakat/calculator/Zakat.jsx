@@ -12,7 +12,7 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { Clipboard, Info } from "lucide-react";
-import { toast, Toaster } from "sonner";
+import { toast } from "sonner";
 
 export default function ZakatCalculator() {
   const [form, setForm] = useState({
@@ -24,8 +24,8 @@ export default function ZakatCalculator() {
     debts: "",
     goldGrams: "",
     silverGrams: "",
-    goldPricePerGram: "7500",
-    silverPricePerGram: "90",
+    goldPricePerGram: "",
+    silverPricePerGram: "",
   });
 
   const [nisabBy, setNisabBy] = useState("gold");
@@ -45,10 +45,11 @@ export default function ZakatCalculator() {
     setForm((prev) => ({ ...prev, [key]: value }));
 
   const calculateZakat = () => {
-    const gVal =
-      parseFloat(form.goldGrams) * parseFloat(form.goldPricePerGram) || 0;
-    const sVal =
-      parseFloat(form.silverGrams) * parseFloat(form.silverPricePerGram) || 0;
+    const goldPrice = parseFloat(form.goldPricePerGram) || 0;
+    const silverPrice = parseFloat(form.silverPricePerGram) || 0;
+
+    const gVal = (parseFloat(form.goldGrams) || 0) * goldPrice;
+    const sVal = (parseFloat(form.silverGrams) || 0) * silverPrice;
 
     const totalAssets =
       (parseFloat(form.cash) || 0) +
@@ -61,10 +62,8 @@ export default function ZakatCalculator() {
 
     const net = totalAssets - (parseFloat(form.debts) || 0);
 
-    const nisabValueByGold =
-      nisabThresholds.gold * (parseFloat(form.goldPricePerGram) || 0);
-    const nisabValueBySilver =
-      nisabThresholds.silver * (parseFloat(form.silverPricePerGram) || 0);
+    const nisabValueByGold = nisabThresholds.gold * goldPrice;
+    const nisabValueBySilver = nisabThresholds.silver * silverPrice;
 
     const chosenNisab =
       nisabBy === "gold" ? nisabValueByGold : nisabValueBySilver;
@@ -100,8 +99,8 @@ export default function ZakatCalculator() {
       debts: "",
       goldGrams: "",
       silverGrams: "",
-      goldPricePerGram: "7500",
-      silverPricePerGram: "90",
+      goldPricePerGram: "",
+      silverPricePerGram: "",
     });
     setResults({
       zakatDue: 0,
@@ -147,17 +146,17 @@ export default function ZakatCalculator() {
                 </h3>
                 <div className="text-sm text-red-600 space-y-1">
                   <p>
-                    <strong>স্বর্ণের ভিত্তিতে:</strong> {nisabThresholds.gold}
+                    <strong>স্বর্ণের ভিত্তিতে:</strong> {nisabThresholds.gold}{" "}
                     গ্রাম স্বর্ণ বা তার সমমূল্যের সম্পদ
                   </p>
                   <p>
-                    <strong>রূপার ভিত্তিতে:</strong>
+                    <strong>রূপার ভিত্তিতে:</strong>{" "}
                     {nisabThresholds.silver.toLocaleString()} গ্রাম রূপা বা তার
                     সমমূল্যের সম্পদ
                   </p>
                   <p className="text-xs mt-2">
-                    ※ আপনার মোট সম্পদ নিসাবের সীমা অতিক্রম করলে এবং এক বছর পূর্ণ
-                    হলে যাকাত ফরজ হয়।
+                    ※ আপনার এলাকার বাজার থেকে ১ গ্রাম স্বর্ণ ও রূপার দাম লিখে
+                    হিসাব করুন।
                   </p>
                 </div>
               </div>
@@ -174,8 +173,14 @@ export default function ZakatCalculator() {
               { key: "debts", label: "বকেয়া ঋণ" },
               { key: "goldGrams", label: "স্বর্ণ (গ্রাম)" },
               { key: "silverGrams", label: "রূপা (গ্রাম)" },
-              { key: "goldPricePerGram", label: "স্বর্ণ প্রতি গ্রাম মূল্য" },
-              { key: "silverPricePerGram", label: "রূপা প্রতি গ্রাম মূল্য" },
+              {
+                key: "goldPricePerGram",
+                label: "১ গ্রাম স্বর্ণের বর্তমান মূল্য (টাকা)",
+              },
+              {
+                key: "silverPricePerGram",
+                label: "১ গ্রাম রূপার বর্তমান মূল্য (টাকা)",
+              },
             ].map((f) => (
               <div key={f.key}>
                 <label className="block text-sm font-medium mb-1">
@@ -196,7 +201,7 @@ export default function ZakatCalculator() {
               </label>
               <Select value={nisabBy} onValueChange={setNisabBy}>
                 <SelectTrigger className="w-full">
-                  <SelectValue />
+                  <SelectValue placeholder="একটি নির্বাচন করুন" />
                 </SelectTrigger>
                 <SelectContent>
                   <SelectItem value="gold">

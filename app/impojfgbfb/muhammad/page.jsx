@@ -1,6 +1,6 @@
 import ProphetMuhammad from "./ProphetMuhammad";
 import ImportantSection from "@/components/ImportantSection";
-import { ShowPopup } from "@/components/ShowPopup";
+// import { ShowPopup } from "@/components/ShowPopup";
 
 async function fetchWikiData(language = "bn") {
   const wikiBase = language === "bn" ? "bn.wikipedia.org" : "en.wikipedia.org";
@@ -64,7 +64,7 @@ export default async function ProphetPage() {
   return (
     <div className="min-h-screen py-8">
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-8">
-        <ShowPopup />
+        {/* <ShowPopup /> */}
         {/* Main Content */}
         <div className="lg:col-span-2">
           <ProphetMuhammad initialData={initialData} />

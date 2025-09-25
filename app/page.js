@@ -1,5 +1,4 @@
 import ConfirmationMessage from "@/components/ConfirmationMessage";
-import ImageGallery from "@/components/imageGallery/ImageGallery";
 import IslamicTopicsGrid from "@/components/IslamicGrid";
 import { PremiumCarousel } from "@/components/PremiumCarousel";
 import SocialMedia from "@/components/SocialMedia";

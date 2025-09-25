@@ -4,7 +4,8 @@ import { AlertCircle } from "lucide-react";
 import { Skeleton } from "@/components/ui/skeleton";
 import ImportantSection from "@/components/ImportantSection";
 import FeelingNavigation from "./FeelingNav";
-import { ShowPopup } from "@/components/ShowPopup";
+// import { ShowPopup } from "@/components/ShowPopup";
+
 export default function FeelingClient({ slug, feelingData, supplicationData }) {
   const [hydrated, setHydrated] = useState(false);
 
@@ -13,6 +14,7 @@ export default function FeelingClient({ slug, feelingData, supplicationData }) {
     return () => clearTimeout(timer);
   }, []);
 
+  // Loading state
   if (!hydrated) {
     return (
       <div className="min-h-screen py-8 px-4">
@@ -38,6 +40,7 @@ export default function FeelingClient({ slug, feelingData, supplicationData }) {
     );
   }
 
+  // No feeling found
   if (!feelingData) {
     return (
       <div className="min-h-64 flex items-center justify-center bg-gradient-to-br from-emerald-50 to-green-100 p-4 rounded-lg">
@@ -51,6 +54,7 @@ export default function FeelingClient({ slug, feelingData, supplicationData }) {
     );
   }
 
+  // No supplications found
   if (!supplicationData) {
     return (
       <div className="min-h-screen py-8 px-4">
@@ -71,19 +75,9 @@ export default function FeelingClient({ slug, feelingData, supplicationData }) {
     );
   }
 
-  const allFeelings = supplicationData ? Object.keys(supplicationData) : [];
-  const feelingKeys = Object.keys(supplicationData || {});
-  const currentIndex = feelingKeys.indexOf(slug);
-
-  const prevFeeling = currentIndex > 0 ? feelingKeys[currentIndex - 1] : null;
-  const nextFeeling =
-    currentIndex < feelingKeys.length - 1
-      ? feelingKeys[currentIndex + 1]
-      : null;
-
   return (
     <div className="min-h-screen py-8 px-4">
-      <ShowPopup />
+      {/* <ShowPopup/> */}
       <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-8">
         {/* Left side */}
         <div className="lg:col-span-2">

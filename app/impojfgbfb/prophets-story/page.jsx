@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { getProphetCategories } from "./prophet";
 import ImportantSection from "@/components/ImportantSection";
-import { ShowPopup } from "@/components/ShowPopup";
+// import { ShowPopup } from "@/components/ShowPopup";
 import SocialMedia from "@/components/SocialMedia";
 
 export default function ZikrCategoriesPage() {
@@ -82,7 +82,7 @@ export default function ZikrCategoriesPage() {
 
   return (
     <div className="">
-      <ShowPopup />
+      {/* <ShowPopup /> */}
       <div className="min-h-screen py-8 px-4">
         <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-8">
           {/* Left side (Categories grid, 2/3 space) */}

@@ -1,5 +1,5 @@
 export async function generateMetadata({ params }) {
-  const { slug } = params;
+  const { slug } = await params; // ✅ must await params in App Router
 
   const metadataMap = {
     morning: {
@@ -28,10 +28,10 @@ export async function generateMetadata({ params }) {
   );
 }
 
-export default function RootLayout({ children }) {
+export default async function RootLayout({ children }) {
   return (
-    <html lang="en, bn">
-      <body>
+    <html lang="bn">
+      <body className="antialiased bg-white text-gray-900">
         {children}
       </body>
     </html>

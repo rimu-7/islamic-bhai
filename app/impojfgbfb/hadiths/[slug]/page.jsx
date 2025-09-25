@@ -23,7 +23,7 @@ async function getChapters(slug) {
 }
 
 export default async function BookPage({ params }) {
-  const { slug } = params;
+  const { slug } = await params; // ✅ fixed
   const chapters = await getChapters(slug);
   const bookName = slug.replace(/-/g, " ");
 

@@ -4,6 +4,7 @@ import { Hind_Siliguri } from "next/font/google";
 import { Amiri } from "next/font/google";
 import Navbar from "@/components/Navbar";
 import { Toaster } from "sonner";
+import { Analytics } from "@vercel/analytics/next";
 
 const hindSiliguri = Hind_Siliguri({
   subsets: ["bengali"],
@@ -32,13 +33,11 @@ export default function RootLayout({ children }) {
   return (
     <html lang="bn" className={`${hindSiliguri.variable} ${amiri.variable}`}>
       <body className="font-sans antialiased bg-white text-gray-900">
-        <a href="#main" className="sr-only focus:not-sr-only">
-          Skip to content
-        </a>
         <Navbar />
         <Toaster position="top-center" expand={true} richColors />
         <main id="main" className="max-w-6xl mx-auto px-4">
           {children}
+          <Analytics />
         </main>
         <Footer />
       </body>

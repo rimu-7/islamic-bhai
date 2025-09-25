@@ -1,11 +1,10 @@
-
-import { ShowPopup } from "@/components/ShowPopup";
+// import { ShowPopup } from "@/components/ShowPopup";
 import { getProphetBySlug } from "../prophet";
 import ImportantSection from "@/components/ImportantSection";
-import ProphetClient from "./\bProphetClient";
+import ProphetClient from "./ProphetClient";
 
-export default function ProphetPage({ params }) {
-  const { slug } = params;
+export default async function ProphetPage({ params }) {
+  const { slug } = await params;
   const prophetData = getProphetBySlug(slug);
 
   if (!prophetData) {
@@ -18,15 +17,15 @@ export default function ProphetPage({ params }) {
 
   return (
     <div className="">
-      <ShowPopup/>
+      {/* <ShowPopup /> */}
       <div className="min-h-screen py-8 px-4">
         <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-8">
-          {/* Left side (Feelings grid, takes 2/3 space) */}
+          {/* Left side */}
           <div className="lg:col-span-2">
             <ProphetClient prophetData={prophetData} />
           </div>
 
-          {/* Right side (ImportantSection, takes 1/3 space) */}
+          {/* Right side */}
           <div>
             <ImportantSection />
           </div>

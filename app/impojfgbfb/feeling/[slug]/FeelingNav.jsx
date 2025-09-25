@@ -1,6 +1,5 @@
 // components/FeelingNavigation.jsx
 import Link from "next/link";
-import { motion } from "framer-motion";
 import data from "@/public/ok.json";
 import { ArrowLeft, ArrowRight, Sparkles } from "lucide-react";
 
@@ -11,7 +10,6 @@ export default function FeelingNavigation({ slug }) {
   const prevFeeling = index > 0 ? feelings[index - 1] : null;
   const nextFeeling = index < feelings.length - 1 ? feelings[index + 1] : null;
 
-  // --- 🎲 Pick 3 random suggestions (excluding current slug) ---
   const suggestions = feelings
     .filter((f) => !f.path.endsWith(slug))
     .sort(() => 0.5 - Math.random())
